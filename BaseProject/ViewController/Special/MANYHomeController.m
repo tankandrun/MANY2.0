@@ -118,15 +118,19 @@ static int dex = 0;
     [self.cell.pnBtn setTitle:[self.homeVM getStrPn].stringValue forState:UIControlStateNormal];
     self.cell.zuozheLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][0];
     self.cell.zuopinLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][1];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"dd&MMM ,yyyy"];
+    NSString *dateStr = [formatter stringFromDate:[MANYTool dateFromString:[self.homeVM getStrMarketTime]]];
+    NSArray *arr = [dateStr componentsSeparatedByString:@"&"];
+    self.cell.dayLB.text = arr[0];
+    self.cell.dayLB.textColor = myTintRGB;
+    self.cell.monthyearLB.text = arr[1];
 }
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return kWindowH;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"%ld",indexPath.row);
-}
-
 
 
 - (void)didReceiveMemoryWarning {
