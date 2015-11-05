@@ -31,7 +31,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(self.view).with.insets(UIEdgeInsetsMake(128, 0, 0, 0));
     }];
     
 }

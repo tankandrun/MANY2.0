@@ -49,26 +49,34 @@
         });
     });
 }
-
+/**
+ *  添加TopLogo
+ */
 +(UIView *)addTopLogo {
     UIImageView *topLogo = [[UIImageView alloc]init];
     topLogo.contentMode = UIViewContentModeScaleAspectFit;
     topLogo.image = [UIImage imageNamed:@"navLogo"];
-    topLogo.frame = CGRectMake(0, 0, 100, 18);
+    topLogo.frame = CGRectMake(137.5, 35, 100, 18);
     return topLogo;
 }
-
-+(UIBarButtonItem *)addButtonAndTarget:(id)target{
-    UIButton *shareButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 22, 22)];
++ (void)addNaviBarToSuperView:(UIView *)view withTarget:(id)target {
+    UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
+    [naviBar addSubview:[self addTopLogo]];
+    UIButton *shareButton = [[UIButton alloc]initWithFrame:CGRectMake(340, 30, 22, 22)];
     [shareButton setImage:[UIImage imageNamed:@"shareBtn"] forState:(UIControlStateNormal)];
-    shareButton.nightImageN = [UIImage imageNamed:@"shareBtn"];
-    UIBarButtonItem *shareItem = [[UIBarButtonItem alloc]initWithCustomView:shareButton];
+    //    shareButton.nightImageN = [UIImage imageNamed:@"shareBtn"];
     [shareButton bk_addEventHandler:^(id sender) {
         MANYShareView *shareView = [MANYShareView createViewFromNib];
         TYAlertController *alertController = [TYAlertController alertControllerWithAlertView:shareView preferredStyle:(TYAlertControllerStyleActionSheet)];
         alertController.backgoundTapDismissEnable = YES;
         [target presentViewController:alertController animated:YES completion:nil];
     } forControlEvents:(UIControlEventTouchUpInside)];
-    return shareItem;
+    [naviBar addSubview:shareButton];
+    [view addSubview:naviBar];
+}
++ (void)addNonButtonNaviBarToSuperView:(UIView *)view {
+    UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
+    [naviBar addSubview:[self addTopLogo]];
+    [view addSubview:naviBar];
 }
 @end

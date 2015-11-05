@@ -41,8 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
-    [self.view addSubview:naviBar];
+    [MANYTool addNaviBarToSuperView:self.view withTarget:self];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -22,13 +22,13 @@
  *  显示界面
  */
 + (void)getInterFaceWithIc:(iCarousel *)ic usingViewModel:(id)viewModel atSuperView:(UIView *)superView withRow:(NSInteger)row;
-/**
- *  添加TopLogo
- */
-+(UIView *)addTopLogo;
-/**
- *  添加右上角Button并添加弹出分享菜单功能
- */
-+(UIBarButtonItem *)addButtonAndTarget:(id)target;
 
+/**
+ *  添加带有按钮的UINavigationBar
+ */
++ (void)addNaviBarToSuperView:(UIView *)view withTarget:(id)target;
+/**
+ *  添加没有按钮的UINavigationBar
+ */
++ (void)addNonButtonNaviBarToSuperView:(UIView *)view;
 @end
