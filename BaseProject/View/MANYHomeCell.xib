@@ -103,6 +103,8 @@
                                 <state key="normal" title="1999" image="home_like">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="selected" image="home_like_hl"/>
+                                <state key="highlighted" image="home_like_hl"/>
                                 <connections>
                                     <action selector="pnBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qRn-Uc-9md"/>
                                 </connections>
@@ -161,7 +163,14 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="contentLB" destination="32E-wg-tx7" id="Ktg-PD-EiM"/>
+                <outlet property="dayLB" destination="jmg-fJ-Shc" id="FYj-fi-UIL"/>
+                <outlet property="homeImage" destination="Bvw-KB-qlr" id="GIT-zE-a9b"/>
+                <outlet property="hpTitleLB" destination="EKZ-UC-91i" id="6ze-J4-KpX"/>
+                <outlet property="monthyearLB" destination="dz4-dk-qyA" id="qeS-Sh-LUW"/>
                 <outlet property="pnBtn" destination="6Ml-Qj-KQt" id="iWt-dY-uka"/>
+                <outlet property="zuopinLB" destination="qU8-EL-fBl" id="LEI-nm-e3M"/>
+                <outlet property="zuozheLB" destination="5pQ-GY-no5" id="pEC-Hu-WZZ"/>
             </connections>
             <point key="canvasLocation" x="279.5" y="262"/>
         </tableViewCell>
@@ -171,5 +180,6 @@
         <image name="contBack" width="209" height="29"/>
         <image name="home_like" width="12" height="10"/>
         <image name="home_likeBg" width="31" height="28"/>
+        <image name="home_like_hl" width="12" height="10"/>
     </resources>
 </document>

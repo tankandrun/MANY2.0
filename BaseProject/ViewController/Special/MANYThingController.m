@@ -1,21 +1,20 @@
 //
-//  MANYReadingController.m
+//  MANYThingController.m
 //  MANY
 //
-//  Created by 金顺度 on 15/11/4.
+//  Created by 金顺度 on 15/11/5.
 //  Copyright © 2015年 Main. All rights reserved.
 //
 
-#import "MANYReadingController.h"
+#import "MANYThingController.h"
 
-@interface MANYReadingController ()<iCarouselDelegate,iCarouselDataSource>
+@interface MANYThingController ()<iCarouselDelegate,iCarouselDataSource>
 @property (nonatomic,strong)iCarousel *ic;
 
-@property (nonatomic,strong)UIScrollView *readingScroll;
-
+@property (nonatomic,strong)UIScrollView *thingScroll;
 @end
 
-@implementation MANYReadingController
+@implementation MANYThingController
 - (iCarousel *)ic {
     if (!_ic) {
         _ic = [iCarousel new];
@@ -29,11 +28,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    
 }
 #pragma mark - iCarousel
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
@@ -44,28 +43,25 @@
         view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, kWindowH)];
     }
     UIScrollView *scrollview = [[UIScrollView alloc]init];
-    self.readingScroll = scrollview;
-    [view addSubview:self.readingScroll];
+    self.thingScroll = scrollview;
+    [view addSubview:self.thingScroll];
     scrollview.frame = view.frame;
     scrollview.contentSize = CGSizeMake(kWindowW, 2000);
     scrollview.showsVerticalScrollIndicator = YES;
-    scrollview.backgroundColor = [UIColor greenColor];
-    [self.readingScroll mas_makeConstraints:^(MASConstraintMaker *make) {
+    scrollview.backgroundColor = [UIColor purpleColor];
+    [self.thingScroll mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
     scrollview.userInteractionEnabled = YES;
-    
     UILabel *label = [[UILabel alloc]init];
-    label.text = @"reading";
-    label.frame = CGRectMake(0, 200, 100, 20);
-    [self.readingScroll addSubview:label];
-    
+    label.text = @"thing";
+    label.frame = CGRectMake(0, 0, 100, 20);
+    [self.thingScroll addSubview:label];
     return view;
 }
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
     NSLog(@"%ld",index);
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

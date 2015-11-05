@@ -12,7 +12,7 @@
 //static int row = 0;
 - (NSInteger)row {
     if (!_row) {
-        _row = 0;
+        _row = 1;
     }
     return _row;
 }
@@ -33,7 +33,13 @@
     if (_row == 0) {
         return nil;
     }else {
-        return self.homeDataArr[_row-1];
+        if (self.homeDataArr[_row-1] == nil) {
+            return self.homeDataArr[_row-2];
+        }else {
+            return self.homeDataArr[_row-1];
+        }
+        
+        
     }
 }
 #pragma mark - 获得数据
@@ -57,31 +63,27 @@
 }
 #pragma mark - 请求数据
 //获取更多
-- (void)getMoreDataCompletionHandle:(CompletionHandle)completionHandle {
+- (void)getMoreDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle {
     if (_row == 11) {
         NSError *error = [NSError errorWithDomain:@"" code:0 userInfo:nil];
         completionHandle(error);
     }else {
-        _row += 1;
-        [self getDataFromNetCompleteHandle:completionHandle];
+        [self getDataWithRow:row FromNetCompleteHandle:completionHandle];
     }
 }
 //刷新
-- (void)refreshDataCompletionHandle:(CompletionHandle)completionHandle {
-    _row = 1;
-    [self getDataFromNetCompleteHandle:completionHandle];
+- (void)refreshDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle {
+    [self getDataWithRow:row FromNetCompleteHandle:completionHandle];
 }
 //获取数据
-- (void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle {
-    [MANYNetManager getHomeWithDate:[self getCurrentDate] row:_row completionHandle:^(MANYHomeModel *model, NSError *error) {
-        
-        if (_row == 1) {
+- (void)getDataWithRow:(NSInteger)row FromNetCompleteHandle:(CompletionHandle)completionHandle {
+    [MANYNetManager getHomeWithDate:[self getCurrentDate] row:row completionHandle:^(MANYHomeModel *model, NSError *error) {
+        if (row == 1) {
             [self.homeDataArr removeAllObjects];
         }
-                
         [self.homeDataArr addObject:model.hpEntity];
-        
         completionHandle(error);
+        _row = row;
     }];
 }
 @end

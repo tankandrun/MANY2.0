@@ -28,22 +28,28 @@
     return date;
 }
 
-+ (void)getInterFaceWithTableView:(UITableView *)tableview usingViewModel:(id)viewModel atSuperView:(UIView *)superView {
++ (void)getInterFaceWithIc:(iCarousel *)ic usingViewModel:(id)viewModel atSuperView:(UIView *)superView withRow:(NSInteger)row {
     UIImageView *cover = [[UIImageView alloc]init];
     cover.backgroundColor = [UIColor whiteColor];
     cover.frame = superView.frame;
     [superView addSubview:cover];
-    [SVProgressHUD show];
+    
+    [MBProgressHUD showHUDAddedTo:cover animated:YES];
+//    hud.mode = MBProgressHUDModeIndeterminate;
+#warning 加载的进度条需要处理
+//    [SVProgressHUD show];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [viewModel refreshDataCompletionHandle:^(NSError *error) {
+            [viewModel refreshDataWithRow:row CompletionHandle:^(NSError *error) {
                 [cover removeFromSuperview];
-                [tableview reloadData];
-                [SVProgressHUD dismiss];
+                [ic reloadData];
+//                [SVProgressHUD dismiss];
+                [MBProgressHUD hideHUDForView:cover animated:YES];
             }];
         });
     });
 }
+
 +(UIView *)addTopLogo {
     UIImageView *topLogo = [[UIImageView alloc]init];
     topLogo.contentMode = UIViewContentModeScaleAspectFit;

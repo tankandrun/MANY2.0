@@ -8,14 +8,25 @@
 
 #import "MANYHomeController.h"
 #import "MANYHomeCell.h"
+#import "MANYHomeViewModel.h"
 @interface MANYHomeController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)iCarousel *ic;
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)MANYHomeCell *cell;
+@property (nonatomic,strong)MANYHomeViewModel *homeVM;
+
+@property (nonatomic)NSInteger row;
 
 @end
 
 @implementation MANYHomeController
 
+- (MANYHomeViewModel *)homeVM {
+    if (!_homeVM) {
+        _homeVM = [MANYHomeViewModel new];
+    }
+    return _homeVM;
+}
 - (iCarousel *)ic {
     if (!_ic) {
         _ic = [iCarousel new];
@@ -30,17 +41,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
+    [self.view addSubview:naviBar];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(self.view).with.insets(UIEdgeInsetsMake(128, 0, 0, 0));
     }];
     self.tableView.showsVerticalScrollIndicator = NO;
     
+    [MANYTool getInterFaceWithIc:self.ic usingViewModel:self.homeVM atSuperView:self.view withRow:1];
+//    [SVProgressHUD show];
+    self.row = 1;
+
 }
-#pragma mark - iCarousel
+#pragma mark - iCarouselDataSource
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return 5;
+    return 10;
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     if (!view) {
@@ -56,8 +73,27 @@
     self.tableView = tableView;
     return view;
 }
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
-    NSLog(@"%ld",index);
+#pragma mark - iCarouselDelegate
+static int dex = 0;
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
+#warning 切换界面需要更加平滑，或先加载几组数据存起来
+    NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
+    if (carousel.currentItemIndex > dex) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.homeVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
+                [self.ic reloadData];
+            }];
+        });
+        dex = (int)carousel.currentItemIndex;
+    }else {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.homeVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
+                [self.ic reloadData];
+            }];
+        });
+        dex = (int)carousel.currentItemIndex;
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -69,17 +105,26 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MANYHomeCell" owner:self options:nil] lastObject];
     }
-    self.tableView.contentOffset = CGPointMake(0, -64);
-    cell.backgroundColor = [UIColor redColor];
-//    cell.userInteractionEnabled = NO;
+    //设置cell不会被点击，但是上面的button能够被相应
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.cell = cell;
+    [self configureCell];
     return cell;
+}
+- (void)configureCell {
+    self.cell.hpTitleLB.text = [self.homeVM getStrHpTitle];
+    [self.cell.homeImage setImageWithURL:[self.homeVM getThumbnailUrl]];
+    self.cell.contentLB.text = [self.homeVM getStrContent];
+    [self.cell.pnBtn setTitle:[self.homeVM getStrPn].stringValue forState:UIControlStateNormal];
+    self.cell.zuozheLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][0];
+    self.cell.zuopinLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][1];
 }
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kWindowH-49;
+    return kWindowH;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%ld",indexPath.row);
+//    NSLog(@"%ld",indexPath.row);
 }
 
 

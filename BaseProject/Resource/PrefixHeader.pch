@@ -92,6 +92,8 @@ static const int ddLogLevel = DDLogLevelError;
 #import "DKNightVersion.h"
 //iCarousel
 #import "iCarousel.h"
+//添加自己的工具类
+#import "MANYTool.h"
 
 
 #endif /* PrefixHeader_pch */

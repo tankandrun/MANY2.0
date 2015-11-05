@@ -1,21 +1,21 @@
 //
-//  MANYReadingController.m
+//  MANYQueController.m
 //  MANY
 //
-//  Created by 金顺度 on 15/11/4.
+//  Created by 金顺度 on 15/11/5.
 //  Copyright © 2015年 Main. All rights reserved.
 //
 
-#import "MANYReadingController.h"
+#import "MANYQueController.h"
 
-@interface MANYReadingController ()<iCarouselDelegate,iCarouselDataSource>
+@interface MANYQueController ()<iCarouselDataSource,iCarouselDelegate>
 @property (nonatomic,strong)iCarousel *ic;
 
-@property (nonatomic,strong)UIScrollView *readingScroll;
+@property (nonatomic,strong)UIScrollView *queScroll;
 
 @end
 
-@implementation MANYReadingController
+@implementation MANYQueController
 - (iCarousel *)ic {
     if (!_ic) {
         _ic = [iCarousel new];
@@ -29,11 +29,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    
 }
 #pragma mark - iCarousel
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
@@ -44,22 +44,20 @@
         view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, kWindowH)];
     }
     UIScrollView *scrollview = [[UIScrollView alloc]init];
-    self.readingScroll = scrollview;
-    [view addSubview:self.readingScroll];
+    self.queScroll = scrollview;
+    [view addSubview:self.queScroll];
     scrollview.frame = view.frame;
     scrollview.contentSize = CGSizeMake(kWindowW, 2000);
     scrollview.showsVerticalScrollIndicator = YES;
-    scrollview.backgroundColor = [UIColor greenColor];
-    [self.readingScroll mas_makeConstraints:^(MASConstraintMaker *make) {
+    scrollview.backgroundColor = [UIColor blueColor];
+    [self.queScroll mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
     scrollview.userInteractionEnabled = YES;
-    
     UILabel *label = [[UILabel alloc]init];
-    label.text = @"reading";
-    label.frame = CGRectMake(0, 200, 100, 20);
-    [self.readingScroll addSubview:label];
-    
+    label.text = @"que";
+    label.frame = CGRectMake(0, 0, 100, 20);
+    [self.queScroll addSubview:label];
     return view;
 }
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {

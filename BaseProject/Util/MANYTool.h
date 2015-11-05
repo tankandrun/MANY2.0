@@ -21,7 +21,7 @@
 /**
  *  显示界面
  */
-+ (void)getInterFaceWithTableView:(UITableView *)tableview usingViewModel:(id)viewModel atSuperView:(UIView *)superView;
++ (void)getInterFaceWithIc:(iCarousel *)ic usingViewModel:(id)viewModel atSuperView:(UIView *)superView withRow:(NSInteger)row;
 /**
  *  添加TopLogo
  */

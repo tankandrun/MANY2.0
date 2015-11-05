@@ -40,6 +40,8 @@
 		A93C61A41BEA371B00167BEB /* MANYReadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C61A31BEA371B00167BEB /* MANYReadingController.m */; };
 		A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */; };
 		A93C61AC1BEA3BBC00167BEB /* MANYHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */; };
+		A983F1EE1BEB4A69001AC127 /* MANYQueController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983F1ED1BEB4A69001AC127 /* MANYQueController.m */; };
+		A983F1F11BEB4CDD001AC127 /* MANYThingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983F1F01BEB4CDD001AC127 /* MANYThingController.m */; };
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
 		A996B6841BEA2832001CB4EF /* MANYQueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67D1BEA2832001CB4EF /* MANYQueModel.m */; };
@@ -144,6 +146,10 @@
 		A93C61A81BEA3BBC00167BEB /* MANYHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeCell.h; sourceTree = "<group>"; };
 		A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeCell.m; sourceTree = "<group>"; };
 		A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MANYHomeCell.xib; sourceTree = "<group>"; };
+		A983F1EC1BEB4A69001AC127 /* MANYQueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueController.h; sourceTree = "<group>"; };
+		A983F1ED1BEB4A69001AC127 /* MANYQueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueController.m; sourceTree = "<group>"; };
+		A983F1EF1BEB4CDD001AC127 /* MANYThingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingController.h; sourceTree = "<group>"; };
+		A983F1F01BEB4CDD001AC127 /* MANYThingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYThingController.m; sourceTree = "<group>"; };
 		A996B6781BEA2831001CB4EF /* MANYHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeModel.h; sourceTree = "<group>"; };
 		A996B6791BEA2831001CB4EF /* MANYHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeModel.m; sourceTree = "<group>"; };
 		A996B67A1BEA2831001CB4EF /* MANYReadingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingModel.h; sourceTree = "<group>"; };
@@ -471,6 +477,10 @@
 				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
 				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
 				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
+				A983F1EC1BEB4A69001AC127 /* MANYQueController.h */,
+				A983F1ED1BEB4A69001AC127 /* MANYQueController.m */,
+				A983F1EF1BEB4CDD001AC127 /* MANYThingController.h */,
+				A983F1F01BEB4CDD001AC127 /* MANYThingController.m */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -855,10 +865,12 @@
 				A996B6DC1BEA2927001CB4EF /* DKNightVersionManager.m in Sources */,
 				A996B6F41BEA2927001CB4EF /* TYBaseAnimation.m in Sources */,
 				A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */,
+				A983F1F11BEB4CDD001AC127 /* MANYThingController.m in Sources */,
 				A996B6E31BEA2927001CB4EF /* UIButton+TitleColor.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				A996B6F21BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m in Sources */,
 				A996B6E11BEA2927001CB4EF /* UIBarButtonItem+TintColor.m in Sources */,
+				A983F1EE1BEB4A69001AC127 /* MANYQueController.m in Sources */,
 				A93C619D1BEA2DE100167BEB /* MANYHomeController.m in Sources */,
 				A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */,
 				A996B6DE1BEA2927001CB4EF /* UIImageView+NightImage.m in Sources */,

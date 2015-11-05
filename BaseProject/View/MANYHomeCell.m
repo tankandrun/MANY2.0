@@ -10,6 +10,7 @@
 
 @implementation MANYHomeCell
 - (IBAction)pnBtn:(id)sender {
+    self.selected = !self.isSelected;
     NSLog(@"11");
 }
 

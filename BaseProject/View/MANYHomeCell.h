@@ -10,5 +10,13 @@
 
 @interface MANYHomeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *pnBtn;
+@property (weak, nonatomic) IBOutlet UILabel *hpTitleLB;
+@property (weak, nonatomic) IBOutlet UIImageView *homeImage;
+@property (weak, nonatomic) IBOutlet UILabel *dayLB;
+@property (weak, nonatomic) IBOutlet UILabel *monthyearLB;
+@property (weak, nonatomic) IBOutlet UILabel *contentLB;
+@property (weak, nonatomic) IBOutlet UILabel *zuozheLB;
+@property (weak, nonatomic) IBOutlet UILabel *zuopinLB;
+
 
 @end
