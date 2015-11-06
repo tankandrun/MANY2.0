@@ -40,6 +40,7 @@
 		A93C61A41BEA371B00167BEB /* MANYReadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C61A31BEA371B00167BEB /* MANYReadingController.m */; };
 		A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */; };
 		A93C61AC1BEA3BBC00167BEB /* MANYHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */; };
+		A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */; };
 		A983F1EE1BEB4A69001AC127 /* MANYQueController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983F1ED1BEB4A69001AC127 /* MANYQueController.m */; };
 		A983F1F11BEB4CDD001AC127 /* MANYThingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983F1F01BEB4CDD001AC127 /* MANYThingController.m */; };
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
@@ -80,7 +81,6 @@
 		A996B6F51BEA2927001CB4EF /* TYShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D41BEA2927001CB4EF /* TYShowAlertView.m */; };
 		A996B6F61BEA2927001CB4EF /* UIView+TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */; };
 		A996B6F71BEA2927001CB4EF /* UIView+TYAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */; };
-		A996B7041BEA2944001CB4EF /* MANYReadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6FB1BEA2944001CB4EF /* MANYReadingCell.m */; };
 		A996B7051BEA2944001CB4EF /* MANYQueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6FD1BEA2944001CB4EF /* MANYQueCell.m */; };
 		A996B7061BEA2944001CB4EF /* MANYThingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6FF1BEA2944001CB4EF /* MANYThingCell.m */; };
 		A996B7071BEA2944001CB4EF /* MANYShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7011BEA2944001CB4EF /* MANYShareView.m */; };
@@ -146,6 +146,8 @@
 		A93C61A81BEA3BBC00167BEB /* MANYHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeCell.h; sourceTree = "<group>"; };
 		A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeCell.m; sourceTree = "<group>"; };
 		A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MANYHomeCell.xib; sourceTree = "<group>"; };
+		A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingScrollView.h; sourceTree = "<group>"; };
+		A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingScrollView.m; sourceTree = "<group>"; };
 		A983F1EC1BEB4A69001AC127 /* MANYQueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueController.h; sourceTree = "<group>"; };
 		A983F1ED1BEB4A69001AC127 /* MANYQueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueController.m; sourceTree = "<group>"; };
 		A983F1EF1BEB4CDD001AC127 /* MANYThingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingController.h; sourceTree = "<group>"; };
@@ -226,8 +228,6 @@
 		A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYAlertView.m"; sourceTree = "<group>"; };
 		A996B6D71BEA2927001CB4EF /* UIView+TYAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYAutoLayout.h"; sourceTree = "<group>"; };
 		A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYAutoLayout.m"; sourceTree = "<group>"; };
-		A996B6FA1BEA2944001CB4EF /* MANYReadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingCell.h; sourceTree = "<group>"; };
-		A996B6FB1BEA2944001CB4EF /* MANYReadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingCell.m; sourceTree = "<group>"; };
 		A996B6FC1BEA2944001CB4EF /* MANYQueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueCell.h; sourceTree = "<group>"; };
 		A996B6FD1BEA2944001CB4EF /* MANYQueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueCell.m; sourceTree = "<group>"; };
 		A996B6FE1BEA2944001CB4EF /* MANYThingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingCell.h; sourceTree = "<group>"; };
@@ -431,8 +431,8 @@
 				A93C61A81BEA3BBC00167BEB /* MANYHomeCell.h */,
 				A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */,
 				A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */,
-				A996B6FA1BEA2944001CB4EF /* MANYReadingCell.h */,
-				A996B6FB1BEA2944001CB4EF /* MANYReadingCell.m */,
+				A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */,
+				A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */,
 				A996B6FC1BEA2944001CB4EF /* MANYQueCell.h */,
 				A996B6FD1BEA2944001CB4EF /* MANYQueCell.m */,
 				A996B6FE1BEA2944001CB4EF /* MANYThingCell.h */,
@@ -876,12 +876,12 @@
 				A996B6DE1BEA2927001CB4EF /* UIImageView+NightImage.m in Sources */,
 				A996B6E21BEA2927001CB4EF /* UIButton+NightVersion.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
-				A996B7041BEA2944001CB4EF /* MANYReadingCell.m in Sources */,
 				A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */,
 				A996B7051BEA2944001CB4EF /* MANYQueCell.m in Sources */,
 				A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 				A996B6F61BEA2927001CB4EF /* UIView+TYAlertView.m in Sources */,
+				A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */,
 				A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */,
 				A996B6E61BEA2927001CB4EF /* UINavigationBar+NightVersion.m in Sources */,
 			);

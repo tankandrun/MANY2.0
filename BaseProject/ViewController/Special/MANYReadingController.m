@@ -7,12 +7,15 @@
 //
 
 #import "MANYReadingController.h"
+#import "MANYReadingScrollView.h"
+#import "MANYReadingViewModel.h"
 
 @interface MANYReadingController ()<iCarouselDelegate,iCarouselDataSource>
 @property (nonatomic,strong)iCarousel *ic;
+@property (nonatomic,strong)MANYReadingScrollView *readingScroll;
+@property (nonatomic,strong)MANYReadingViewModel *readingVM;
 
-@property (nonatomic,strong)UIScrollView *readingScroll;
-
+@property (nonatomic)NSInteger row;
 @end
 
 @implementation MANYReadingController
@@ -27,43 +30,78 @@
     }
     return _ic;
 }
+- (MANYReadingViewModel *)readingVM {
+    if (!_readingVM) {
+        _readingVM = [MANYReadingViewModel new];
+    }
+    return _readingVM;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view).with.insets(UIEdgeInsetsMake(128, 0, 0, 0));
     }];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [MANYTool addNaviBarToSuperView:self.view withTarget:self];
     
+    [MANYTool getInterFaceWithIc:self.ic usingViewModel:self.readingVM atSuperView:self.view withRow:1];
+    self.row = 1;
 }
-#pragma mark - iCarousel
+#pragma mark - iCarouselDataSource
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return 5;
+    return 10;
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     if (!view) {
         view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWindowW, kWindowH)];
     }
-    UIScrollView *scrollview = [[UIScrollView alloc]init];
+    
+    MANYReadingScrollView *scrollview = [[MANYReadingScrollView alloc]init];
     self.readingScroll = scrollview;
     [view addSubview:self.readingScroll];
     scrollview.frame = view.frame;
-    scrollview.contentSize = CGSizeMake(kWindowW, 2000);
-    scrollview.showsVerticalScrollIndicator = YES;
-    scrollview.backgroundColor = [UIColor greenColor];
     [self.readingScroll mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
+    
     scrollview.userInteractionEnabled = YES;
-    
-    UILabel *label = [[UILabel alloc]init];
-    label.text = @"reading";
-    label.frame = CGRectMake(0, 200, 100, 20);
-    [self.readingScroll addSubview:label];
-    
+    scrollview.showsVerticalScrollIndicator = NO;
+    [self configureReadingScrollView];
     return view;
 }
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
-    NSLog(@"%ld",index);
+#pragma mark - iCarouselDelegate
+static int dex = 0;
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
+    NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
+    if (carousel.currentItemIndex > dex) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.readingVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
+                [self.ic reloadData];
+            }];
+        });
+        dex = (int)carousel.currentItemIndex;
+    }else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.readingVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
+                [self.ic reloadData];
+            }];
+        });
+        dex = (int)carousel.currentItemIndex;
+    }
+}
+#pragma mark - configureData
+- (void)configureReadingScrollView {
+    self.readingScroll.dateLB.text = [self.readingVM getStrContMarketTime];
+    self.readingScroll.TitleLB.text = [self.readingVM getStrContTitle];
+    self.readingScroll.zuozheLB.text = [self.readingVM getStrContAuthor];
+//    self.readingScroll.contentLB.text = [[self.readingVM getStrContent]stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
+    
+    self.readingScroll.introduceLB.text = [self.readingVM getStrContAuthorIntroduce];
+    [self.readingScroll.pnButton setTitle:[self.readingVM getStrPraiseNumber] forState:UIControlStateNormal];
+    self.readingScroll.dazuozheLB.text = [self.readingVM getStrContAuthor];
+    self.readingScroll.zuozheweiboLB.text = [self.readingVM getsWbN];
+    self.readingScroll.zuozheIntroLB.text = [self.readingVM getsAuth];
 }
 
 

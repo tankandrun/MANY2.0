@@ -34,17 +34,17 @@
     cover.frame = superView.frame;
     [superView addSubview:cover];
     
-    [MBProgressHUD showHUDAddedTo:cover animated:YES];
+//    [MBProgressHUD showHUDAddedTo:cover animated:YES];
 //    hud.mode = MBProgressHUDModeIndeterminate;
 #warning 加载的进度条需要处理
-//    [SVProgressHUD show];
+    [SVProgressHUD show];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [viewModel refreshDataWithRow:row CompletionHandle:^(NSError *error) {
                 [cover removeFromSuperview];
                 [ic reloadData];
-//                [SVProgressHUD dismiss];
-                [MBProgressHUD hideHUDForView:cover animated:YES];
+                [SVProgressHUD dismiss];
+//                [MBProgressHUD hideHUDForView:cover animated:YES];
             }];
         });
     });
@@ -61,6 +61,7 @@
 }
 + (void)addNaviBarToSuperView:(UIView *)view withTarget:(id)target {
     UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
+    naviBar.backgroundColor = kRGBColor(230, 230, 230);
     [naviBar addSubview:[self addTopLogo]];
     UIButton *shareButton = [[UIButton alloc]initWithFrame:CGRectMake(340, 30, 22, 22)];
     [shareButton setImage:[UIImage imageNamed:@"shareBtn"] forState:(UIControlStateNormal)];
@@ -76,6 +77,7 @@
 }
 + (void)addNonButtonNaviBarToSuperView:(UIView *)view {
     UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
+    naviBar.backgroundColor = kRGBColor(230, 230, 230);
     [naviBar addSubview:[self addTopLogo]];
     [view addSubview:naviBar];
 }

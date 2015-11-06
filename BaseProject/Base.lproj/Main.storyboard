@@ -39,11 +39,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kgD-QQ-sAy" kind="relationship" relationship="viewControllers" id="OWA-rJ-hBC"/>
                         <segue destination="C91-Ci-g0Q" kind="relationship" relationship="viewControllers" id="dud-00-BHC"/>
                         <segue destination="Jb7-Ul-o0n" kind="relationship" relationship="viewControllers" id="bfW-yz-ELu"/>
                         <segue destination="dbo-v5-rW6" kind="relationship" relationship="viewControllers" id="QSt-0H-uyg"/>
                         <segue destination="Pa8-ZU-eET" kind="relationship" relationship="viewControllers" id="Zbp-Va-nz7"/>
+                        <segue destination="kgD-QQ-sAy" kind="relationship" relationship="viewControllers" id="OWA-rJ-hBC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIU-3f-Lxp" userLabel="First Responder" sceneMemberID="firstResponder"/>

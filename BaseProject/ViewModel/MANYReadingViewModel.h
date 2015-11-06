@@ -22,4 +22,5 @@
 - (NSString *)getStrPraiseNumber;
 - (NSString *)getsWbN;
 - (NSString *)getsAuth;
+
 @end

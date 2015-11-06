@@ -32,12 +32,14 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.ic];
     [self.ic mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
+        make.edges.mas_equalTo(self.view).with.insets(UIEdgeInsetsMake(128, 0, 0, 0));
     }];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [MANYTool addNaviBarToSuperView:self.view withTarget:self];
 }
 #pragma mark - iCarousel
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return 5;
+    return 10;
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view {
     if (!view) {

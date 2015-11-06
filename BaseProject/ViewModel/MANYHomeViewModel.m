@@ -38,8 +38,6 @@
         }else {
             return self.homeDataArr[_row-1];
         }
-        
-        
     }
 }
 #pragma mark - 获得数据

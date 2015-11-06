@@ -50,7 +50,6 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     
     [MANYTool getInterFaceWithIc:self.ic usingViewModel:self.homeVM atSuperView:self.view withRow:1];
-//    [SVProgressHUD show];
     self.row = 1;
 
 }
@@ -70,12 +69,19 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     self.tableView = tableView;
+    
     return view;
 }
 #pragma mark - iCarouselDelegate
 static int dex = 0;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
 #warning 切换界面需要更加平滑，或先加载几组数据存起来
+//    if (carousel.currentItemIndex != self.ic.currentItemIndex) {
+//        UIImageView *cover = [[UIImageView alloc]init];
+//        cover.frame = CGRectMake(0, 0, 500, 500);
+//        cover.backgroundColor = [UIColor yellowColor];
+//        [self.view addSubview:cover];
+//    }
     NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
     if (carousel.currentItemIndex > dex) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -85,7 +91,6 @@ static int dex = 0;
         });
         dex = (int)carousel.currentItemIndex;
     }else {
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.homeVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
                 [self.ic reloadData];
