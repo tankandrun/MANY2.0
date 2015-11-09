@@ -41,6 +41,11 @@
 		A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */; };
 		A93C61AC1BEA3BBC00167BEB /* MANYHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */; };
 		A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */; };
+		A988A9A71BF070040080019C /* MANYZhiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A61BF070040080019C /* MANYZhiModel.m */; };
+		A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A91BF072660080019C /* MANYZhiNetManager.m */; };
+		A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */; };
+		A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */; };
+		A988A9F21BF0B15A0080019C /* MANYZhiController.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9F11BF0B15A0080019C /* MANYZhiController.m */; };
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
 		A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6881BEA2858001CB4EF /* MANYNetManager.m */; };
@@ -81,6 +86,7 @@
 		A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70B1BEA295C001CB4EF /* MANYTabBarController.m */; };
 		A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */; };
 		A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */; };
+		A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BF70751BF0CEF100099014 /* MANYZhiCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +145,16 @@
 		A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MANYHomeCell.xib; sourceTree = "<group>"; };
 		A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingScrollView.h; sourceTree = "<group>"; };
 		A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingScrollView.m; sourceTree = "<group>"; };
+		A988A9A51BF070040080019C /* MANYZhiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiModel.h; sourceTree = "<group>"; };
+		A988A9A61BF070040080019C /* MANYZhiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiModel.m; sourceTree = "<group>"; };
+		A988A9A81BF072660080019C /* MANYZhiNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiNetManager.h; sourceTree = "<group>"; };
+		A988A9A91BF072660080019C /* MANYZhiNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiNetManager.m; sourceTree = "<group>"; };
+		A988A9EA1BF07EF00080019C /* MANYZhiListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiListModel.h; sourceTree = "<group>"; };
+		A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiListModel.m; sourceTree = "<group>"; };
+		A988A9ED1BF08B4D0080019C /* MANYZhiViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiViewModel.h; sourceTree = "<group>"; };
+		A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiViewModel.m; sourceTree = "<group>"; };
+		A988A9F01BF0B15A0080019C /* MANYZhiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiController.h; sourceTree = "<group>"; };
+		A988A9F11BF0B15A0080019C /* MANYZhiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiController.m; sourceTree = "<group>"; };
 		A996B6781BEA2831001CB4EF /* MANYHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeModel.h; sourceTree = "<group>"; };
 		A996B6791BEA2831001CB4EF /* MANYHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeModel.m; sourceTree = "<group>"; };
 		A996B67A1BEA2831001CB4EF /* MANYReadingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingModel.h; sourceTree = "<group>"; };
@@ -218,6 +234,8 @@
 		A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeViewModel.m; sourceTree = "<group>"; };
 		A996B70F1BEA2975001CB4EF /* MANYReadingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingViewModel.h; sourceTree = "<group>"; };
 		A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingViewModel.m; sourceTree = "<group>"; };
+		A9BF70741BF0CEF100099014 /* MANYZhiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiCell.h; sourceTree = "<group>"; };
+		A9BF70751BF0CEF100099014 /* MANYZhiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiCell.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -344,6 +362,10 @@
 				A996B6791BEA2831001CB4EF /* MANYHomeModel.m */,
 				A996B67A1BEA2831001CB4EF /* MANYReadingModel.h */,
 				A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */,
+				A988A9A51BF070040080019C /* MANYZhiModel.h */,
+				A988A9A61BF070040080019C /* MANYZhiModel.m */,
+				A988A9EA1BF07EF00080019C /* MANYZhiListModel.h */,
+				A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,6 +377,8 @@
 				3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */,
 				A996B6871BEA2858001CB4EF /* MANYNetManager.h */,
 				A996B6881BEA2858001CB4EF /* MANYNetManager.m */,
+				A988A9A81BF072660080019C /* MANYZhiNetManager.h */,
+				A988A9A91BF072660080019C /* MANYZhiNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -400,6 +424,8 @@
 				A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */,
 				A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */,
 				A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */,
+				A9BF70741BF0CEF100099014 /* MANYZhiCell.h */,
+				A9BF70751BF0CEF100099014 /* MANYZhiCell.m */,
 				A996B7001BEA2944001CB4EF /* MANYShareView.h */,
 				A996B7011BEA2944001CB4EF /* MANYShareView.m */,
 				A996B7021BEA2944001CB4EF /* MANYShareView.xib */,
@@ -425,6 +451,8 @@
 				A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */,
 				A996B70F1BEA2975001CB4EF /* MANYReadingViewModel.h */,
 				A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */,
+				A988A9ED1BF08B4D0080019C /* MANYZhiViewModel.h */,
+				A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -436,6 +464,8 @@
 				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
 				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
 				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
+				A988A9F01BF0B15A0080019C /* MANYZhiController.h */,
+				A988A9F11BF0B15A0080019C /* MANYZhiController.m */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -790,15 +820,20 @@
 				A996B6E91BEA2927001CB4EF /* UITabBar+NightVersion.m in Sources */,
 				A996B6EB1BEA2927001CB4EF /* UITableView+SeparatorColor.m in Sources */,
 				A996B6F11BEA2927001CB4EF /* TYAlertFadeAnimation.m in Sources */,
+				A988A9A71BF070040080019C /* MANYZhiModel.m in Sources */,
 				A996B6F71BEA2927001CB4EF /* UIView+TYAutoLayout.m in Sources */,
 				A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */,
+				A988A9F21BF0B15A0080019C /* MANYZhiController.m in Sources */,
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				A93C61A41BEA371B00167BEB /* MANYReadingController.m in Sources */,
 				A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */,
+				A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */,
+				A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */,
 				A996B6E01BEA2927001CB4EF /* UIBarButtonItem+NightVersion.m in Sources */,
+				A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */,
 				A996B6F01BEA2927001CB4EF /* TYAlertDropDownAnimation.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				A996B7071BEA2944001CB4EF /* MANYShareView.m in Sources */,
@@ -811,6 +846,7 @@
 				A996B6E41BEA2927001CB4EF /* UILabel+NightVersion.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,
 				A996B6EE1BEA2927001CB4EF /* TYAlertController+TransitionAnimate.m in Sources */,
+				A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */,
 				A996B6DC1BEA2927001CB4EF /* DKNightVersionManager.m in Sources */,
 				A996B6F41BEA2927001CB4EF /* TYBaseAnimation.m in Sources */,
 				A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */,

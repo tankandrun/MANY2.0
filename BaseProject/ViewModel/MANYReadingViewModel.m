@@ -79,6 +79,7 @@
 //刷新
 - (void)refreshDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle {
     [self getDataWithRow:row FromNetCompleteHandle:completionHandle];
+//     NSLog(@"");
 }
 //获取数据
 - (void)getDataWithRow:(NSInteger)row FromNetCompleteHandle:(CompletionHandle)completionHandle {
@@ -90,6 +91,7 @@
         completionHandle(error);
         _row = row;
     }];
+//    NSLog(@"");
 }
 
 @end

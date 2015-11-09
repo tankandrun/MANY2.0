@@ -14,6 +14,8 @@
 #define myTintRGB               kRGBColor(64,195,240)
 #define myTextRGB               kRGBColor(50,50,50)
 #define myNightTextRGB          kRGBColor(150,150,150)
+//一天的时间
+#define oneDay                  -(60*60*24)
 
 #define kWindowH   [UIScreen mainScreen].bounds.size.height //应用程序的屏幕高度
 #define kWindowW    [UIScreen mainScreen].bounds.size.width  //应用程序的屏幕宽度

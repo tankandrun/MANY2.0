@@ -16,7 +16,8 @@ typedef void(^CompletionHandle)(NSError *error);
 //获取更多
 - (void)getMoreDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle ;
 //刷新
-- (void)refreshDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle; //获取数据
+- (void)refreshDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle;
+//获取数据
 - (void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle;
 
 @end

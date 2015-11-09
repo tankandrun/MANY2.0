@@ -21,15 +21,19 @@
     UITabBarItem *itemOne = [self.tabBar.items objectAtIndex:0];
     itemOne.image = [UIImage imageNamed:@"home"];
     itemOne.selectedImage = [UIImage imageNamed:@"homeSelected"];
-    itemOne.title = @"首页";
+    itemOne.title = @"TUS";
     UITabBarItem *itemTwo = [self.tabBar.items objectAtIndex:1];
     itemTwo.image = [UIImage imageNamed:@"reading"];
     itemTwo.selectedImage = [UIImage imageNamed:@"readingSelected"];
-    itemTwo.title = @"文章";
-    UITabBarItem *itemFive = [self.tabBar.items objectAtIndex:2];
+    itemTwo.title = @"WEN";
+    UITabBarItem *itemThree = [self.tabBar.items objectAtIndex:2];
+    itemThree.image = [UIImage imageNamed:@"thing"];
+    itemThree.selectedImage = [UIImage imageNamed:@"thingSelected"];
+    itemThree.title = @"ZHI";
+    UITabBarItem *itemFive = [self.tabBar.items objectAtIndex:3];
     itemFive.image = [UIImage imageNamed:@"person"];
     itemFive.selectedImage = [UIImage imageNamed:@"personSelected"];
-    itemFive.title = @"个人";
+    itemFive.title = @"ME";
     
 }
 
