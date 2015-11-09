@@ -41,13 +41,8 @@
 		A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C61A91BEA3BBC00167BEB /* MANYHomeCell.m */; };
 		A93C61AC1BEA3BBC00167BEB /* MANYHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */; };
 		A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */; };
-		A983F1EE1BEB4A69001AC127 /* MANYQueController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983F1ED1BEB4A69001AC127 /* MANYQueController.m */; };
-		A983F1F11BEB4CDD001AC127 /* MANYThingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A983F1F01BEB4CDD001AC127 /* MANYThingController.m */; };
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
-		A996B6841BEA2832001CB4EF /* MANYQueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67D1BEA2832001CB4EF /* MANYQueModel.m */; };
-		A996B6851BEA2832001CB4EF /* MANYThingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67F1BEA2832001CB4EF /* MANYThingModel.m */; };
-		A996B6861BEA2832001CB4EF /* MANYAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6811BEA2832001CB4EF /* MANYAdModel.m */; };
 		A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6881BEA2858001CB4EF /* MANYNetManager.m */; };
 		A996B68C1BEA28D5001CB4EF /* MANYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B68B1BEA28D5001CB4EF /* MANYTool.m */; };
 		A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B68F1BEA2927001CB4EF /* TYAlertController+BlurEffects.m */; };
@@ -81,15 +76,11 @@
 		A996B6F51BEA2927001CB4EF /* TYShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D41BEA2927001CB4EF /* TYShowAlertView.m */; };
 		A996B6F61BEA2927001CB4EF /* UIView+TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */; };
 		A996B6F71BEA2927001CB4EF /* UIView+TYAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */; };
-		A996B7051BEA2944001CB4EF /* MANYQueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6FD1BEA2944001CB4EF /* MANYQueCell.m */; };
-		A996B7061BEA2944001CB4EF /* MANYThingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6FF1BEA2944001CB4EF /* MANYThingCell.m */; };
 		A996B7071BEA2944001CB4EF /* MANYShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7011BEA2944001CB4EF /* MANYShareView.m */; };
 		A996B7081BEA2944001CB4EF /* MANYShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A996B7021BEA2944001CB4EF /* MANYShareView.xib */; };
 		A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70B1BEA295C001CB4EF /* MANYTabBarController.m */; };
 		A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */; };
 		A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */; };
-		A996B7171BEA2975001CB4EF /* MANYQueViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7121BEA2975001CB4EF /* MANYQueViewModel.m */; };
-		A996B7181BEA2975001CB4EF /* MANYThingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7141BEA2975001CB4EF /* MANYThingViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,20 +139,10 @@
 		A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MANYHomeCell.xib; sourceTree = "<group>"; };
 		A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingScrollView.h; sourceTree = "<group>"; };
 		A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingScrollView.m; sourceTree = "<group>"; };
-		A983F1EC1BEB4A69001AC127 /* MANYQueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueController.h; sourceTree = "<group>"; };
-		A983F1ED1BEB4A69001AC127 /* MANYQueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueController.m; sourceTree = "<group>"; };
-		A983F1EF1BEB4CDD001AC127 /* MANYThingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingController.h; sourceTree = "<group>"; };
-		A983F1F01BEB4CDD001AC127 /* MANYThingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYThingController.m; sourceTree = "<group>"; };
 		A996B6781BEA2831001CB4EF /* MANYHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeModel.h; sourceTree = "<group>"; };
 		A996B6791BEA2831001CB4EF /* MANYHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeModel.m; sourceTree = "<group>"; };
 		A996B67A1BEA2831001CB4EF /* MANYReadingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingModel.h; sourceTree = "<group>"; };
 		A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingModel.m; sourceTree = "<group>"; };
-		A996B67C1BEA2832001CB4EF /* MANYQueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueModel.h; sourceTree = "<group>"; };
-		A996B67D1BEA2832001CB4EF /* MANYQueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueModel.m; sourceTree = "<group>"; };
-		A996B67E1BEA2832001CB4EF /* MANYThingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingModel.h; sourceTree = "<group>"; };
-		A996B67F1BEA2832001CB4EF /* MANYThingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYThingModel.m; sourceTree = "<group>"; };
-		A996B6801BEA2832001CB4EF /* MANYAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYAdModel.h; sourceTree = "<group>"; };
-		A996B6811BEA2832001CB4EF /* MANYAdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYAdModel.m; sourceTree = "<group>"; };
 		A996B6871BEA2858001CB4EF /* MANYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYNetManager.h; sourceTree = "<group>"; };
 		A996B6881BEA2858001CB4EF /* MANYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYNetManager.m; sourceTree = "<group>"; };
 		A996B68A1BEA28D5001CB4EF /* MANYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYTool.h; sourceTree = "<group>"; };
@@ -228,10 +209,6 @@
 		A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYAlertView.m"; sourceTree = "<group>"; };
 		A996B6D71BEA2927001CB4EF /* UIView+TYAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYAutoLayout.h"; sourceTree = "<group>"; };
 		A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYAutoLayout.m"; sourceTree = "<group>"; };
-		A996B6FC1BEA2944001CB4EF /* MANYQueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueCell.h; sourceTree = "<group>"; };
-		A996B6FD1BEA2944001CB4EF /* MANYQueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueCell.m; sourceTree = "<group>"; };
-		A996B6FE1BEA2944001CB4EF /* MANYThingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingCell.h; sourceTree = "<group>"; };
-		A996B6FF1BEA2944001CB4EF /* MANYThingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYThingCell.m; sourceTree = "<group>"; };
 		A996B7001BEA2944001CB4EF /* MANYShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYShareView.h; sourceTree = "<group>"; };
 		A996B7011BEA2944001CB4EF /* MANYShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYShareView.m; sourceTree = "<group>"; };
 		A996B7021BEA2944001CB4EF /* MANYShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MANYShareView.xib; sourceTree = "<group>"; };
@@ -241,10 +218,6 @@
 		A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeViewModel.m; sourceTree = "<group>"; };
 		A996B70F1BEA2975001CB4EF /* MANYReadingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingViewModel.h; sourceTree = "<group>"; };
 		A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingViewModel.m; sourceTree = "<group>"; };
-		A996B7111BEA2975001CB4EF /* MANYQueViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYQueViewModel.h; sourceTree = "<group>"; };
-		A996B7121BEA2975001CB4EF /* MANYQueViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYQueViewModel.m; sourceTree = "<group>"; };
-		A996B7131BEA2975001CB4EF /* MANYThingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYThingViewModel.h; sourceTree = "<group>"; };
-		A996B7141BEA2975001CB4EF /* MANYThingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYThingViewModel.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -371,12 +344,6 @@
 				A996B6791BEA2831001CB4EF /* MANYHomeModel.m */,
 				A996B67A1BEA2831001CB4EF /* MANYReadingModel.h */,
 				A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */,
-				A996B67C1BEA2832001CB4EF /* MANYQueModel.h */,
-				A996B67D1BEA2832001CB4EF /* MANYQueModel.m */,
-				A996B67E1BEA2832001CB4EF /* MANYThingModel.h */,
-				A996B67F1BEA2832001CB4EF /* MANYThingModel.m */,
-				A996B6801BEA2832001CB4EF /* MANYAdModel.h */,
-				A996B6811BEA2832001CB4EF /* MANYAdModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -433,10 +400,6 @@
 				A93C61AA1BEA3BBC00167BEB /* MANYHomeCell.xib */,
 				A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */,
 				A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */,
-				A996B6FC1BEA2944001CB4EF /* MANYQueCell.h */,
-				A996B6FD1BEA2944001CB4EF /* MANYQueCell.m */,
-				A996B6FE1BEA2944001CB4EF /* MANYThingCell.h */,
-				A996B6FF1BEA2944001CB4EF /* MANYThingCell.m */,
 				A996B7001BEA2944001CB4EF /* MANYShareView.h */,
 				A996B7011BEA2944001CB4EF /* MANYShareView.m */,
 				A996B7021BEA2944001CB4EF /* MANYShareView.xib */,
@@ -462,10 +425,6 @@
 				A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */,
 				A996B70F1BEA2975001CB4EF /* MANYReadingViewModel.h */,
 				A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */,
-				A996B7111BEA2975001CB4EF /* MANYQueViewModel.h */,
-				A996B7121BEA2975001CB4EF /* MANYQueViewModel.m */,
-				A996B7131BEA2975001CB4EF /* MANYThingViewModel.h */,
-				A996B7141BEA2975001CB4EF /* MANYThingViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -477,10 +436,6 @@
 				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
 				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
 				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
-				A983F1EC1BEB4A69001AC127 /* MANYQueController.h */,
-				A983F1ED1BEB4A69001AC127 /* MANYQueController.m */,
-				A983F1EF1BEB4CDD001AC127 /* MANYThingController.h */,
-				A983F1F01BEB4CDD001AC127 /* MANYThingController.m */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -824,7 +779,6 @@
 				A996B6ED1BEA2927001CB4EF /* UIView+NightVersion.m in Sources */,
 				A996B6EF1BEA2927001CB4EF /* TYAlertController.m in Sources */,
 				A996B6EA1BEA2927001CB4EF /* UITableView+NightVersion.m in Sources */,
-				A996B6851BEA2832001CB4EF /* MANYThingModel.m in Sources */,
 				A996B6E71BEA2927001CB4EF /* UINavigationBar+TintColor.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */,
@@ -840,16 +794,11 @@
 				A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */,
-				A996B6841BEA2832001CB4EF /* MANYQueModel.m in Sources */,
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
-				A996B7171BEA2975001CB4EF /* MANYQueViewModel.m in Sources */,
 				A93C61A41BEA371B00167BEB /* MANYReadingController.m in Sources */,
 				A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */,
 				A996B6E01BEA2927001CB4EF /* UIBarButtonItem+NightVersion.m in Sources */,
-				A996B6861BEA2832001CB4EF /* MANYAdModel.m in Sources */,
-				A996B7181BEA2975001CB4EF /* MANYThingViewModel.m in Sources */,
-				A996B7061BEA2944001CB4EF /* MANYThingCell.m in Sources */,
 				A996B6F01BEA2927001CB4EF /* TYAlertDropDownAnimation.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				A996B7071BEA2944001CB4EF /* MANYShareView.m in Sources */,
@@ -865,19 +814,16 @@
 				A996B6DC1BEA2927001CB4EF /* DKNightVersionManager.m in Sources */,
 				A996B6F41BEA2927001CB4EF /* TYBaseAnimation.m in Sources */,
 				A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */,
-				A983F1F11BEB4CDD001AC127 /* MANYThingController.m in Sources */,
 				A996B6E31BEA2927001CB4EF /* UIButton+TitleColor.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				A996B6F21BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m in Sources */,
 				A996B6E11BEA2927001CB4EF /* UIBarButtonItem+TintColor.m in Sources */,
-				A983F1EE1BEB4A69001AC127 /* MANYQueController.m in Sources */,
 				A93C619D1BEA2DE100167BEB /* MANYHomeController.m in Sources */,
 				A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */,
 				A996B6DE1BEA2927001CB4EF /* UIImageView+NightImage.m in Sources */,
 				A996B6E21BEA2927001CB4EF /* UIButton+NightVersion.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
 				A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */,
-				A996B7051BEA2944001CB4EF /* MANYQueCell.m in Sources */,
 				A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 				A996B6F61BEA2927001CB4EF /* UIView+TYAlertView.m in Sources */,

@@ -59,15 +59,15 @@
     
     MANYReadingScrollView *scrollview = [[MANYReadingScrollView alloc]init];
     self.readingScroll = scrollview;
-    [view addSubview:self.readingScroll];
+    [view addSubview:scrollview];
     scrollview.frame = view.frame;
-    [self.readingScroll mas_makeConstraints:^(MASConstraintMaker *make) {
+    scrollview.showsVerticalScrollIndicator = YES;
+    [scrollview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    
     scrollview.userInteractionEnabled = YES;
-    scrollview.showsVerticalScrollIndicator = NO;
     [self configureReadingScrollView];
+    
     return view;
 }
 #pragma mark - iCarouselDelegate
@@ -95,8 +95,7 @@ static int dex = 0;
     self.readingScroll.dateLB.text = [self.readingVM getStrContMarketTime];
     self.readingScroll.TitleLB.text = [self.readingVM getStrContTitle];
     self.readingScroll.zuozheLB.text = [self.readingVM getStrContAuthor];
-//    self.readingScroll.contentLB.text = [[self.readingVM getStrContent]stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
-    
+    self.readingScroll.contentTV.text = [[self.readingVM getStrContent]stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
     self.readingScroll.introduceLB.text = [self.readingVM getStrContAuthorIntroduce];
     [self.readingScroll.pnButton setTitle:[self.readingVM getStrPraiseNumber] forState:UIControlStateNormal];
     self.readingScroll.dazuozheLB.text = [self.readingVM getStrContAuthor];

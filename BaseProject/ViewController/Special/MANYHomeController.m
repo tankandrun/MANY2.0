@@ -73,16 +73,14 @@
     return view;
 }
 #pragma mark - iCarouselDelegate
+- (void)carouselDidScroll:(iCarousel *)carousel {
+#warning 开始滑动时触发，在这里设置下一页的内容
+    NSLog(@"滑动");
+}
 static int dex = 0;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
 #warning 切换界面需要更加平滑，或先加载几组数据存起来
-//    if (carousel.currentItemIndex != self.ic.currentItemIndex) {
-//        UIImageView *cover = [[UIImageView alloc]init];
-//        cover.frame = CGRectMake(0, 0, 500, 500);
-//        cover.backgroundColor = [UIColor yellowColor];
-//        [self.view addSubview:cover];
-//    }
-    NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
+//    NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
     if (carousel.currentItemIndex > dex) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.homeVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
@@ -135,21 +133,5 @@ static int dex = 0;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return kWindowH;
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

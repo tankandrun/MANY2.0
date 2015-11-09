@@ -26,15 +26,7 @@
     itemTwo.image = [UIImage imageNamed:@"reading"];
     itemTwo.selectedImage = [UIImage imageNamed:@"readingSelected"];
     itemTwo.title = @"文章";
-    UITabBarItem *itemThird = [self.tabBar.items objectAtIndex:2];
-    itemThird.image = [UIImage imageNamed:@"question"];
-    itemThird.selectedImage = [UIImage imageNamed:@"questionSelected"];
-    itemThird.title = @"问题";
-    UITabBarItem *itemFour = [self.tabBar.items objectAtIndex:3];
-    itemFour.image = [UIImage imageNamed:@"thing"];
-    itemFour.selectedImage = [UIImage imageNamed:@"thingSelected"];
-    itemFour.title = @"东西";
-    UITabBarItem *itemFive = [self.tabBar.items objectAtIndex:4];
+    UITabBarItem *itemFive = [self.tabBar.items objectAtIndex:2];
     itemFive.image = [UIImage imageNamed:@"person"];
     itemFive.selectedImage = [UIImage imageNamed:@"personSelected"];
     itemFive.title = @"个人";
