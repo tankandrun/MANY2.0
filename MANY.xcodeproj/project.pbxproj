@@ -49,7 +49,6 @@
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
 		A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6881BEA2858001CB4EF /* MANYNetManager.m */; };
-		A996B68C1BEA28D5001CB4EF /* MANYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B68B1BEA28D5001CB4EF /* MANYTool.m */; };
 		A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B68F1BEA2927001CB4EF /* TYAlertController+BlurEffects.m */; };
 		A996B6DA1BEA2927001CB4EF /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6911BEA2927001CB4EF /* UIImage+ImageEffects.m */; };
 		A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6951BEA2927001CB4EF /* UIViewController+ChangeColor.m */; };
@@ -87,6 +86,9 @@
 		A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */; };
 		A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */; };
 		A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BF70751BF0CEF100099014 /* MANYZhiCell.m */; };
+		A9F3A21C1BF1F11B00246D62 /* MANYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21B1BF1F11B00246D62 /* MANYTool.m */; };
+		A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21E1BF1F13800246D62 /* MANYImageView.m */; };
+		A9F3A2221BF215F400246D62 /* MANYZhiDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A2211BF215F400246D62 /* MANYZhiDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,8 +163,6 @@
 		A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingModel.m; sourceTree = "<group>"; };
 		A996B6871BEA2858001CB4EF /* MANYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYNetManager.h; sourceTree = "<group>"; };
 		A996B6881BEA2858001CB4EF /* MANYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYNetManager.m; sourceTree = "<group>"; };
-		A996B68A1BEA28D5001CB4EF /* MANYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYTool.h; sourceTree = "<group>"; };
-		A996B68B1BEA28D5001CB4EF /* MANYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYTool.m; sourceTree = "<group>"; };
 		A996B68E1BEA2927001CB4EF /* TYAlertController+BlurEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TYAlertController+BlurEffects.h"; sourceTree = "<group>"; };
 		A996B68F1BEA2927001CB4EF /* TYAlertController+BlurEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TYAlertController+BlurEffects.m"; sourceTree = "<group>"; };
 		A996B6901BEA2927001CB4EF /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -236,6 +236,12 @@
 		A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingViewModel.m; sourceTree = "<group>"; };
 		A9BF70741BF0CEF100099014 /* MANYZhiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiCell.h; sourceTree = "<group>"; };
 		A9BF70751BF0CEF100099014 /* MANYZhiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiCell.m; sourceTree = "<group>"; };
+		A9F3A21A1BF1F11B00246D62 /* MANYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYTool.h; sourceTree = "<group>"; };
+		A9F3A21B1BF1F11B00246D62 /* MANYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYTool.m; sourceTree = "<group>"; };
+		A9F3A21D1BF1F13800246D62 /* MANYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYImageView.h; sourceTree = "<group>"; };
+		A9F3A21E1BF1F13800246D62 /* MANYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYImageView.m; sourceTree = "<group>"; };
+		A9F3A2201BF215F400246D62 /* MANYZhiDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiDetailController.h; sourceTree = "<group>"; };
+		A9F3A2211BF215F400246D62 /* MANYZhiDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiDetailController.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,8 +403,7 @@
 		3886C0B31BD74A4A0014E661 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				A996B68A1BEA28D5001CB4EF /* MANYTool.h */,
-				A996B68B1BEA28D5001CB4EF /* MANYTool.m */,
+				A9F3A2191BF1F11B00246D62 /* Tool */,
 				3804CE481BD758F10046C8C8 /* Category */,
 			);
 			path = Util;
@@ -466,6 +471,8 @@
 				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
 				A988A9F01BF0B15A0080019C /* MANYZhiController.h */,
 				A988A9F11BF0B15A0080019C /* MANYZhiController.m */,
+				A9F3A2201BF215F400246D62 /* MANYZhiDetailController.h */,
+				A9F3A2211BF215F400246D62 /* MANYZhiDetailController.m */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -650,6 +657,17 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A9F3A2191BF1F11B00246D62 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A9F3A21A1BF1F11B00246D62 /* MANYTool.h */,
+				A9F3A21B1BF1F11B00246D62 /* MANYTool.m */,
+				A9F3A21D1BF1F13800246D62 /* MANYImageView.h */,
+				A9F3A21E1BF1F13800246D62 /* MANYImageView.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		DEB62B47C560AA65E07ECFA4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,8 +832,8 @@
 				A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */,
 				A996B6F31BEA2927001CB4EF /* TYAlertView.m in Sources */,
 				A996B6E51BEA2927001CB4EF /* UILabel+TextColor.m in Sources */,
-				A996B68C1BEA28D5001CB4EF /* MANYTool.m in Sources */,
 				A996B6DF1BEA2927001CB4EF /* UINavigationBar+Animation.m in Sources */,
+				A9F3A2221BF215F400246D62 /* MANYZhiDetailController.m in Sources */,
 				3885C8FA1BE8E96A009441EA /* PSCollectionViewCell.m in Sources */,
 				A996B6E91BEA2927001CB4EF /* UITabBar+NightVersion.m in Sources */,
 				A996B6EB1BEA2927001CB4EF /* UITableView+SeparatorColor.m in Sources */,
@@ -825,6 +843,7 @@
 				A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */,
+				A9F3A21C1BF1F11B00246D62 /* MANYTool.m in Sources */,
 				A988A9F21BF0B15A0080019C /* MANYZhiController.m in Sources */,
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
@@ -832,6 +851,7 @@
 				A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */,
 				A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */,
 				A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */,
+				A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */,
 				A996B6E01BEA2927001CB4EF /* UIBarButtonItem+NightVersion.m in Sources */,
 				A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */,
 				A996B6F01BEA2927001CB4EF /* TYAlertDropDownAnimation.m in Sources */,

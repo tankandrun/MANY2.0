@@ -18,9 +18,9 @@
     }
     return _titleLb;
 }
-- (UIImageView *)imgView {
+- (MANYImageView *)imgView {
     if (!_imgView) {
-        _imgView = [[UIImageView alloc]init];
+        _imgView = [[MANYImageView alloc]init];
     }
     return _imgView;
 }
@@ -34,8 +34,9 @@
             make.width.mas_equalTo(75);
         }];
         [self.titleLb mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.mas_equalTo(15);
-            make.bottom.mas_equalTo(-15);
+            make.left.mas_equalTo(15);
+            make.topMargin.mas_equalTo(self.imgView.mas_topMargin);
+            make.bottomMargin.mas_equalTo(self.imgView.mas_bottomMargin);
             make.right.mas_equalTo(self.imgView.mas_left).mas_equalTo(-15);
         }];
     }

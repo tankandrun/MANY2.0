@@ -10,6 +10,7 @@
 #import "MANYZhiNetManager.h"
 @interface MANYZhiViewModel ()
 @property (nonatomic,strong) NSString *date;
+//@property (nonatomic,assign) int i;
 
 @end
 
@@ -41,7 +42,11 @@
 }
 #pragma 获得数据
 - (MANYZhiTopModel *)topModelForArr:(NSArray *)arr row:(NSInteger)row {
-    return arr[0][row];
+    if (arr == nil || arr.count == 0) {
+        return nil;
+    }else {
+        return arr[row];
+    }
 }
 - (NSURL *)getTopImageForRow:(NSInteger)row {
     return [NSURL URLWithString:[self topModelForArr:self.zhiDataArr row:row].image];
@@ -85,7 +90,8 @@ static int day = 0;
 - (void)getTopDataFromNetCompleteHandle:(CompletionHandle)completionHandle {
     [MANYZhiNetManager getTopDataCompletionHandle:^(MANYZhiModel *model, NSError *error) {
         [self.zhiDataArr removeAllObjects];
-        [self.zhiDataArr addObject:model.top_stories];
+        NSLog(@"");
+        [self.zhiDataArr addObjectsFromArray:model.top_stories];
         completionHandle(error);
     }];
 }
@@ -94,10 +100,8 @@ static int day = 0;
         if ([[self getCurrentDate] isEqualToString:self.date]) {
             [self.zhiListArr removeAllObjects];
         }
-        NSLog(@"");
-        for (int i = 0; i<model.stories.count; i++) {
-            [self.zhiListArr addObject:model.stories[i]];
-        }
+        [self.zhiListArr addObjectsFromArray:model.stories];
+
         completionHandle(error);
     }];
     

@@ -19,7 +19,7 @@
  */
 + (NSString *)getBigDateFromString:(NSString *)dateStr;
 /**
- *  显示界面
+ *  初始化一个界面
  */
 + (void)getInterFaceWithIc:(iCarousel *)ic usingViewModel:(id)viewModel atSuperView:(UIView *)superView withRow:(NSInteger)row;
 
@@ -31,4 +31,8 @@
  *  添加没有按钮的UINavigationBar
  */
 + (void)addNonButtonNaviBarToSuperView:(UIView *)view;
+/**
+ *  添加自定义的返回按钮
+ */
++ (void)addBackItemToVC:(UIViewController *)vc;
 @end

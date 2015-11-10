@@ -10,6 +10,6 @@
 
 @interface MANYZhiCell : UITableViewCell
 @property (nonatomic,strong) UILabel *titleLb;
-@property (nonatomic,strong) UIImageView *imgView;
+@property (nonatomic,strong) MANYImageView *imgView;
 
 @end
