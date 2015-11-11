@@ -92,8 +92,8 @@ kRemoveCellSeparator
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.hidden = YES;
     UITableView *tableView = [[UITableView alloc]init];
+    self.navigationController.navigationBar.hidden = YES;
     self.tableView = tableView;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -112,6 +112,7 @@ kRemoveCellSeparator
             [self.tableView.header endRefreshing];
         }];
     }];
+#warning 缺少加载更多功能
 //    self.tableView.footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
 //        [self.zhiVM getMoreDataWithRow:0 CompletionHandle:^(NSError *error) {
 //            self.section += 1;
@@ -172,6 +173,11 @@ kRemoveCellSeparator
     }
     return value;
 }
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
+    MANYZhiDetailController *vc = [[MANYZhiDetailController alloc]init];
+    vc.showId = [self.zhiVM getTopIdForRow:index];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - UITableViewDataSource
 //static int section = 1;
@@ -202,9 +208,6 @@ kRemoveCellSeparator
     vc.showId = [self.zhiVM getIdForRow:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-//    return 10;
-//}
 
 
 - (void)didReceiveMemoryWarning {

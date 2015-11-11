@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="2142.5" y="1425.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Me Controller-->
         <scene sceneID="L7W-Mr-pQB">
             <objects>
-                <viewController id="nai-cA-axo" sceneMemberID="viewController">
+                <viewController id="nai-cA-axo" customClass="MANYMeController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WOt-qf-N61"/>
                         <viewControllerLayoutGuide type="bottom" id="ORj-dA-pdF"/>

@@ -34,6 +34,8 @@
         }
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+#warning Umeng...
 }
 
 

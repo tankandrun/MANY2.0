@@ -14,6 +14,7 @@
 #define myTintRGB               kRGBColor(64,195,240)
 #define myTextRGB               kRGBColor(50,50,50)
 #define myNightTextRGB          kRGBColor(150,150,150)
+#define myTabRGB                kRGBColor(247,247,247)
 //一天的时间
 #define oneDay                  -(60*60*24)
 

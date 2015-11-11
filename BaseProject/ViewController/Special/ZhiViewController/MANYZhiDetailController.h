@@ -12,4 +12,8 @@
 
 @property (nonatomic,strong) NSString *showId;
 
+@property (nonatomic,strong) NSString *beforeId;
+@property (nonatomic,strong) NSString *nextId;
+
+
 @end

@@ -28,10 +28,10 @@
     }
     return _zhiListArr;
 }
-- (NSString *)getCurrentDate {
+- (NSString *)getTomorrowDate {
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyyMMdd"];
-    NSString *date = [formatter stringFromDate:[NSDate date]];
+    NSString *date = [formatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:60*60*24]];
     return date;
 }
 - (NSString *)getBeforeDateWithDay:(NSInteger)day {
@@ -83,7 +83,7 @@ static int day = 0;
 //刷新
 - (void)refreshDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle {
     [self getTopDataFromNetCompleteHandle:completionHandle];
-    self.date = [self getBeforeDateWithDay:day];
+    self.date = [self getTomorrowDate];
     [self getListDataFromNetCompleteHandle:completionHandle];
 }
 //获取数据
@@ -97,7 +97,7 @@ static int day = 0;
 }
 - (void)getListDataFromNetCompleteHandle:(CompletionHandle)completionHandle {
     [MANYZhiNetManager getListWithDate:self.date completionHandle:^(MANYZhiListModel *model, NSError *error) {
-        if ([[self getCurrentDate] isEqualToString:self.date]) {
+        if ([[self getTomorrowDate] isEqualToString:self.date]) {
             [self.zhiListArr removeAllObjects];
         }
         [self.zhiListArr addObjectsFromArray:model.stories];
