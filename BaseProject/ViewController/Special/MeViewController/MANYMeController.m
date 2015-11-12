@@ -55,7 +55,7 @@
         cell.textLabel.text = @"设置";
     }else{
         cell.imageView.image = [UIImage imageNamed:@"copyright"];
-        cell.textLabel.text = @"关于";
+        cell.textLabel.text = @"😘快点咯";
     }
     return cell;
 }
@@ -75,7 +75,7 @@ kRemoveCellSeparator
         [self.navigationController pushViewController:vc animated:YES];
     }else{
         MANYAboutViewController *vc = [[MANYAboutViewController alloc]init];
-        vc.title = @"关于";
+        vc.title = @"Surperise";
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

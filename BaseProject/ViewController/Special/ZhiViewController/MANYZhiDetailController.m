@@ -89,6 +89,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.tabBarController.tabBar.hidden = NO;
+    [SVProgressHUD dismiss];
 }
 //http://daily.zhihu.com/story/7413288 文章的具体详情，html页面
 - (void)viewDidLoad {
@@ -103,7 +104,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.view addSubview:self.cover];
+//    [self.view addSubview:self.cover];
 }
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

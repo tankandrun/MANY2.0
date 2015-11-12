@@ -8,6 +8,13 @@
 
 #import "AppDelegate+Category.h"
 #import <AFNetworkActivityIndicatorManager.h>
+#import <MLTransition.h>
+#import "MobClick.h"
+
+#import "UMSocial.h"
+#import "UMSocialSinaHandler.h"//非原生SDK
+//#import "UMSocialSinaSSOHandler.h"
+
 
 @implementation AppDelegate (Category)
 
@@ -35,9 +42,30 @@
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
-#warning Umeng...
+    //启动友盟统计功能,用你自己的友盟AppKey，这样你可以在友盟统计上看到数据
+    [MobClick startWithAppkey:@"563724cbe0f55a25b0000aa9"];
+    //友盟统计默认情况下会关闭掉xcode默认的crash提示
+    [MobClick setLogEnabled:YES];
+    //解决因为使用leftItem导致iOS7自带的右划返回前一页失效问题（保密）
+    [MLTransition validatePanPackWithMLTransitionGestureRecognizerType:MLTransitionGestureRecognizerTypeScreenEdgePan];
+    
+    
+    [UMSocialData setAppKey:@"563724cbe0f55a25b0000aa9"];
+    [UMSocialSinaHandler openSSOWithRedirectURL:nil];
+
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

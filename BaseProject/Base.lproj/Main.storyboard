@@ -20,6 +20,7 @@
                         <segue destination="kgD-QQ-sAy" kind="relationship" relationship="viewControllers" id="OWA-rJ-hBC"/>
                         <segue destination="C91-Ci-g0Q" kind="relationship" relationship="viewControllers" id="dud-00-BHC"/>
                         <segue destination="dOv-KY-K5v" kind="relationship" relationship="viewControllers" id="zms-Nx-war"/>
+                        <segue destination="fPQ-Ul-rmZ" kind="relationship" relationship="viewControllers" id="tHq-gs-lZY"/>
                         <segue destination="Pa8-ZU-eET" kind="relationship" relationship="viewControllers" id="Zbp-Va-nz7"/>
                     </connections>
                 </tabBarController>
@@ -67,6 +68,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu2-K1-XnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="102.5" y="519.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="i5f-ZC-pVW">
+            <objects>
+                <viewController id="fPQ-Ul-rmZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ub-s6-F1B"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lkl-MN-cif"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R5p-s6-lkC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="L1h-Oq-BQ9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRh-Nv-aY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="1620"/>
         </scene>
         <!--Item-->
         <scene sceneID="8cf-xo-84T">

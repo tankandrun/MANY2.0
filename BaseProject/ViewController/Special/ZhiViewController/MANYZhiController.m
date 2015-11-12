@@ -122,6 +122,9 @@ kRemoveCellSeparator
 //    }];
     
 }
+- (void)viewWillDisappear:(BOOL)animated {
+    [SVProgressHUD dismiss];
+}
 - (void)startShowView {
     UIImageView *cover = [[UIImageView alloc]init];
     cover.backgroundColor = [UIColor whiteColor];
