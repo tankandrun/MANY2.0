@@ -60,14 +60,13 @@
     [naviBar addSubview:topLogo];
     [topLogo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(naviBar);
-        make.size.mas_equalTo(CGSizeMake(108, 44));
+        make.size.mas_equalTo(CGSizeMake(108, 40));
         make.bottom.mas_equalTo(0);
     }];
     return topLogo;
 }
 + (void)addNaviBarToSuperView:(UIView *)view withTarget:(id)target {
     UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
-#warning LOGO need to be adjusted
     naviBar.backgroundColor = kRGBColor(245, 245, 245);
     [self addTopLogoToNaviBar:naviBar];
     UIButton *shareButton = [[UIButton alloc]initWithFrame:CGRectMake(340, 30, 22, 22)];

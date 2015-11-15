@@ -24,7 +24,7 @@
         [_weiboIn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(self.view);
             make.size.mas_equalTo(CGSizeMake(200, 40));
-            make.top.mas_equalTo(self.bigLOGO.mas_bottom).mas_equalTo(0);
+            make.top.mas_equalTo(self.view).mas_equalTo(450);
         }];
         [_weiboIn setBackgroundColor:[UIColor redColor]];
         [_weiboIn bk_addEventHandler:^(id sender) {
@@ -77,9 +77,7 @@
         _bigLOGO.imageView.image = [UIImage imageNamed:@"BigLOGO"];
         [self.view addSubview:_bigLOGO];
         [_bigLOGO mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.mas_equalTo(self.view);
-            make.size.mas_equalTo(CGSizeMake(375, 375));
-            make.top.mas_equalTo(64);
+            make.edges.mas_equalTo(0);
         }];
     }
     return _bigLOGO;
@@ -88,11 +86,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [MANYTool addBackItemToVC:self];
-    self.view.backgroundColor = kRGBColor(245, 244, 240);
     // Do any additional setup after loading the view.
+    self.bigLOGO.hidden = NO;
     self.weiboIn.hidden = NO;
     self.qqIn.hidden = NO;
-    self.bigLOGO.hidden = NO;
     
 }
 

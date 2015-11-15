@@ -48,13 +48,13 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     if (indexPath.row == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"p_notLogin"];
+        cell.imageView.image = [UIImage imageNamed:@"login"];
         cell.textLabel.text = @"立即登录";
     }else if (indexPath.row == 1) {
         cell.imageView.image = [UIImage imageNamed:@"setting"];
         cell.textLabel.text = @"设置";
     }else{
-        cell.imageView.image = [UIImage imageNamed:@"copyright"];
+        cell.imageView.image = [UIImage imageNamed:@"more"];
         cell.textLabel.text = @"😘快点咯";
     }
     return cell;
