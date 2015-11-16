@@ -32,7 +32,7 @@
         _ic = [iCarousel new];
         _ic.delegate = self;
         _ic.dataSource = self;
-        _ic.type = 0;
+        _ic.type = iCarouselTypeRotary;
         _ic.autoscroll = 0;
         _ic.pagingEnabled = YES;
     }

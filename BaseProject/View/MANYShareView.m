@@ -8,7 +8,7 @@
 
 #import "MANYShareView.h"
 #import "UIView+TYAlertView.h"
-//#import "UMSocial.h"
+#import "UMSocial.h"
 
 @interface MANYShareView()
 @property (weak, nonatomic) IBOutlet UILabel *nightLB;
@@ -34,9 +34,8 @@
 - (IBAction)fontChange:(id)sender {
     [self hideView];
     NSLog(@"改字体");
-    
 //    [UMSocialSnsService presentSnsIconSheetView:[self viewController]
-//                                         appKey:@"507fcab25270157b37000010"
+//                                         appKey:@"563724cbe0f55a25b0000aa9"
 //                                      shareText:@"你要分享的文字"
 //                                     shareImage:[UIImage imageNamed:@"icon.png"]
 //                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,nil]

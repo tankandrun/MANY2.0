@@ -65,8 +65,8 @@
     self.contentTV = [[UITextView alloc]init];
     self.contentTV.textContainerInset = UIEdgeInsetsMake(8, 0, 8, 0);
     self.contentTV.editable = NO;
-//    self.contentTV.scrollEnabled = NO;
-    self.contentTV.backgroundColor = [UIColor redColor];
+    self.contentTV.scrollEnabled = NO;
+//    self.contentTV.backgroundColor = [UIColor redColor];
     [self addSubview:self.contentTV];
     [self.contentTV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.zuozheLB.mas_bottom).mas_equalTo(10);

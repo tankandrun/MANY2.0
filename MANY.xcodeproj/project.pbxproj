@@ -85,6 +85,8 @@
 		A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A91BF072660080019C /* MANYZhiNetManager.m */; };
 		A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */; };
 		A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */; };
+		A992CD191BFA0E10001972DE /* MANYMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A992CD181BFA0E10001972DE /* MANYMovieViewController.m */; };
+		A992CD1C1BFA10CA001972DE /* MANYMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A992CD1B1BFA10CA001972DE /* MANYMovieModel.m */; };
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
 		A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6881BEA2858001CB4EF /* MANYNetManager.m */; };
@@ -269,6 +271,10 @@
 		A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiListModel.m; sourceTree = "<group>"; };
 		A988A9ED1BF08B4D0080019C /* MANYZhiViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiViewModel.h; sourceTree = "<group>"; };
 		A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiViewModel.m; sourceTree = "<group>"; };
+		A992CD171BFA0E10001972DE /* MANYMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewController.h; sourceTree = "<group>"; };
+		A992CD181BFA0E10001972DE /* MANYMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewController.m; sourceTree = "<group>"; };
+		A992CD1A1BFA10CA001972DE /* MANYMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieModel.h; sourceTree = "<group>"; };
+		A992CD1B1BFA10CA001972DE /* MANYMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieModel.m; sourceTree = "<group>"; };
 		A996B6781BEA2831001CB4EF /* MANYHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeModel.h; sourceTree = "<group>"; };
 		A996B6791BEA2831001CB4EF /* MANYHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYHomeModel.m; sourceTree = "<group>"; };
 		A996B67A1BEA2831001CB4EF /* MANYReadingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingModel.h; sourceTree = "<group>"; };
@@ -478,6 +484,8 @@
 				A988A9A61BF070040080019C /* MANYZhiModel.m */,
 				A988A9EA1BF07EF00080019C /* MANYZhiListModel.h */,
 				A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */,
+				A992CD1A1BFA10CA001972DE /* MANYMovieModel.h */,
+				A992CD1B1BFA10CA001972DE /* MANYMovieModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -619,6 +627,8 @@
 				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
 				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
 				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
+				A992CD171BFA0E10001972DE /* MANYMovieViewController.h */,
+				A992CD181BFA0E10001972DE /* MANYMovieViewController.m */,
 				A90081151BF382DF008A3B01 /* ZhiViewController */,
 				A90081121BF382DF008A3B01 /* MeViewController */,
 			);
@@ -1199,7 +1209,9 @@
 				A996B6F41BEA2927001CB4EF /* TYBaseAnimation.m in Sources */,
 				A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */,
 				A996B6E31BEA2927001CB4EF /* UIButton+TitleColor.m in Sources */,
+				A992CD1C1BFA10CA001972DE /* MANYMovieModel.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
+				A992CD191BFA0E10001972DE /* MANYMovieViewController.m in Sources */,
 				A996B6F21BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m in Sources */,
 				A93851A11BF43E1900E05730 /* MANYFeedBackController.m in Sources */,
 				A90081281BF3838D008A3B01 /* MANYAboutViewController.m in Sources */,

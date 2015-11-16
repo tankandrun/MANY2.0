@@ -14,6 +14,7 @@
 #import "UMSocial.h"
 #import "UMSocialSinaHandler.h"//非原生SDK
 //#import "UMSocialSinaSSOHandler.h"
+#import "UMSocialQQHandler.h"
 
 
 @implementation AppDelegate (Category)
@@ -52,7 +53,8 @@
     
     [UMSocialData setAppKey:@"563724cbe0f55a25b0000aa9"];
     [UMSocialSinaHandler openSSOWithRedirectURL:nil];
-
+    
+    [UMSocialQQHandler setQQWithAppId:@"1104853793" appKey:@"vq90I7z9Cq5Cv4CU" url:nil];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url

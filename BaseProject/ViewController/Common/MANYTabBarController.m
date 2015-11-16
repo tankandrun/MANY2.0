@@ -33,7 +33,7 @@
     UITabBarItem *itemFour = [self.tabBar.items objectAtIndex:3];
     itemFour.image = [UIImage imageNamed:@"Y"];
     itemFour.selectedImage = [UIImage imageNamed:@"Y_h"];
-    itemFour.title = @"";
+    itemFour.title = @"MOV";
     UITabBarItem *itemFive = [self.tabBar.items objectAtIndex:4];
     itemFive.image = [UIImage imageNamed:@"person"];
     itemFive.selectedImage = [UIImage imageNamed:@"personSelected"];
