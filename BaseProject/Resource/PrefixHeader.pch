@@ -96,6 +96,8 @@ static const int ddLogLevel = DDLogLevelError;
 #import "MANYTool.h"
 #import "MANYImageView.h"
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 #endif /* PrefixHeader_pch */
 

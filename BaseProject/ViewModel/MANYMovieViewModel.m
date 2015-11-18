@@ -28,6 +28,9 @@
     }
     return _movieDetail;
 }
+- (NSInteger)allNum {
+    return self.movieList.count;
+}
 #pragma mark - 配置
 - (NSURL *)getImageForItem:(NSInteger)Item {
     MoviesModel *model = self.movieList[Item];

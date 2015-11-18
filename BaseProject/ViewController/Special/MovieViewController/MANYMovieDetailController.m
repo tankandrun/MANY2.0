@@ -1,31 +1,22 @@
 //
-//  MANYMovieViewController.m
+//  MANYMovieDetailController.m
 //  MANY
 //
-//  Created by 金顺度 on 15/11/16.
+//  Created by 金顺度 on 15/11/18.
 //  Copyright © 2015年 Main. All rights reserved.
 //
 
-#import "MANYMovieViewController.h"
-#import "MANYMovieViewModel.h"
+#import "MANYMovieDetailController.h"
 
-@interface MANYMovieViewController ()
-@property (nonatomic,strong) MANYMovieViewModel *moviewVM;
+@interface MANYMovieDetailController ()
 
 @end
 
-@implementation MANYMovieViewController
-- (MANYMovieViewModel *)moviewVM {
-    if (!_moviewVM) {
-        _moviewVM = [MANYMovieViewModel new];
-    }
-    return _moviewVM;
-}
+@implementation MANYMovieDetailController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blueColor];
-   
 }
 
 - (void)didReceiveMemoryWarning {

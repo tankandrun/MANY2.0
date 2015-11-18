@@ -11,6 +11,7 @@
 
 @interface MANYMovieViewModel : BaseViewModel
 
+@property (nonatomic) NSInteger allNum;
 @property (nonatomic,strong) NSMutableArray *movieList;
 @property (nonatomic) NSInteger pageIndex;
 

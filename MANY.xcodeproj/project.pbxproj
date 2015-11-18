@@ -85,7 +85,6 @@
 		A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A91BF072660080019C /* MANYZhiNetManager.m */; };
 		A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */; };
 		A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */; };
-		A992CD191BFA0E10001972DE /* MANYMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A992CD181BFA0E10001972DE /* MANYMovieViewController.m */; };
 		A992CD1C1BFA10CA001972DE /* MANYMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A992CD1B1BFA10CA001972DE /* MANYMovieModel.m */; };
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
@@ -121,6 +120,10 @@
 		A9E137B51BFC2CB2001DED22 /* MANYMovieDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137B41BFC2CB2001DED22 /* MANYMovieDetailModel.m */; };
 		A9E137B81BFC4B53001DED22 /* MANYMovieNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137B71BFC4B53001DED22 /* MANYMovieNetManager.m */; };
 		A9E137BB1BFC4E67001DED22 /* MANYMovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137BA1BFC4E67001DED22 /* MANYMovieViewModel.m */; };
+		A9E137C11BFC712D001DED22 /* PSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137BE1BFC712D001DED22 /* PSCollectionView.m */; };
+		A9E137C21BFC712D001DED22 /* PSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137C01BFC712D001DED22 /* PSCollectionViewCell.m */; };
+		A9E137C61BFC7422001DED22 /* MANYMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137C51BFC7422001DED22 /* MANYMovieViewController.m */; };
+		A9E137C91BFC7442001DED22 /* MANYMovieDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137C81BFC7442001DED22 /* MANYMovieDetailController.m */; };
 		A9F3A21C1BF1F11B00246D62 /* MANYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21B1BF1F11B00246D62 /* MANYTool.m */; };
 		A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21E1BF1F13800246D62 /* MANYImageView.m */; };
 /* End PBXBuildFile section */
@@ -265,8 +268,6 @@
 		A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiListModel.m; sourceTree = "<group>"; };
 		A988A9ED1BF08B4D0080019C /* MANYZhiViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiViewModel.h; sourceTree = "<group>"; };
 		A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiViewModel.m; sourceTree = "<group>"; };
-		A992CD171BFA0E10001972DE /* MANYMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewController.h; sourceTree = "<group>"; };
-		A992CD181BFA0E10001972DE /* MANYMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewController.m; sourceTree = "<group>"; };
 		A992CD1A1BFA10CA001972DE /* MANYMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieModel.h; sourceTree = "<group>"; };
 		A992CD1B1BFA10CA001972DE /* MANYMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieModel.m; sourceTree = "<group>"; };
 		A996B6781BEA2831001CB4EF /* MANYHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYHomeModel.h; sourceTree = "<group>"; };
@@ -338,6 +339,14 @@
 		A9E137B71BFC4B53001DED22 /* MANYMovieNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieNetManager.m; sourceTree = "<group>"; };
 		A9E137B91BFC4E67001DED22 /* MANYMovieViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewModel.h; sourceTree = "<group>"; };
 		A9E137BA1BFC4E67001DED22 /* MANYMovieViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewModel.m; sourceTree = "<group>"; };
+		A9E137BD1BFC712D001DED22 /* PSCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCollectionView.h; sourceTree = "<group>"; };
+		A9E137BE1BFC712D001DED22 /* PSCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCollectionView.m; sourceTree = "<group>"; };
+		A9E137BF1BFC712D001DED22 /* PSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCollectionViewCell.h; sourceTree = "<group>"; };
+		A9E137C01BFC712D001DED22 /* PSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCollectionViewCell.m; sourceTree = "<group>"; };
+		A9E137C41BFC7422001DED22 /* MANYMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewController.h; sourceTree = "<group>"; };
+		A9E137C51BFC7422001DED22 /* MANYMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewController.m; sourceTree = "<group>"; };
+		A9E137C71BFC7442001DED22 /* MANYMovieDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieDetailController.h; sourceTree = "<group>"; };
+		A9E137C81BFC7442001DED22 /* MANYMovieDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieDetailController.m; sourceTree = "<group>"; };
 		A9F3A21A1BF1F11B00246D62 /* MANYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYTool.h; sourceTree = "<group>"; };
 		A9F3A21B1BF1F11B00246D62 /* MANYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYTool.m; sourceTree = "<group>"; };
 		A9F3A21D1BF1F13800246D62 /* MANYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYImageView.h; sourceTree = "<group>"; };
@@ -516,6 +525,7 @@
 		3886C0B41BD74A4A0014E661 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A9E137BC1BFC712D001DED22 /* PSCollectionView */,
 				A94001EA1BF4C02B00AF106D /* WeiboSDK */,
 				A940017D1BF4BFF000AF106D /* 友盟分享 */,
 				A938519A1BF432A800E05730 /* UMAnalytics_Sdk_3.6.4 */,
@@ -617,8 +627,7 @@
 				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
 				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
 				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
-				A992CD171BFA0E10001972DE /* MANYMovieViewController.h */,
-				A992CD181BFA0E10001972DE /* MANYMovieViewController.m */,
+				A9E137C31BFC7422001DED22 /* MovieViewController */,
 				A90081151BF382DF008A3B01 /* ZhiViewController */,
 				A90081121BF382DF008A3B01 /* MeViewController */,
 			);
@@ -938,6 +947,28 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		A9E137BC1BFC712D001DED22 /* PSCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A9E137BD1BFC712D001DED22 /* PSCollectionView.h */,
+				A9E137BE1BFC712D001DED22 /* PSCollectionView.m */,
+				A9E137BF1BFC712D001DED22 /* PSCollectionViewCell.h */,
+				A9E137C01BFC712D001DED22 /* PSCollectionViewCell.m */,
+			);
+			path = PSCollectionView;
+			sourceTree = "<group>";
+		};
+		A9E137C31BFC7422001DED22 /* MovieViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A9E137C41BFC7422001DED22 /* MANYMovieViewController.h */,
+				A9E137C51BFC7422001DED22 /* MANYMovieViewController.m */,
+				A9E137C71BFC7442001DED22 /* MANYMovieDetailController.h */,
+				A9E137C81BFC7442001DED22 /* MANYMovieDetailController.m */,
+			);
+			path = MovieViewController;
+			sourceTree = "<group>";
+		};
 		A9F3A2191BF1F11B00246D62 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1167,11 +1198,12 @@
 				A996B6E41BEA2927001CB4EF /* UILabel+NightVersion.m in Sources */,
 				A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */,
 				A996B6DC1BEA2927001CB4EF /* DKNightVersionManager.m in Sources */,
+				A9E137C11BFC712D001DED22 /* PSCollectionView.m in Sources */,
+				A9E137C61BFC7422001DED22 /* MANYMovieViewController.m in Sources */,
 				A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */,
 				A996B6E31BEA2927001CB4EF /* UIButton+TitleColor.m in Sources */,
 				A992CD1C1BFA10CA001972DE /* MANYMovieModel.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
-				A992CD191BFA0E10001972DE /* MANYMovieViewController.m in Sources */,
 				A93851A11BF43E1900E05730 /* MANYFeedBackController.m in Sources */,
 				A90081281BF3838D008A3B01 /* MANYAboutViewController.m in Sources */,
 				A900811D1BF382DF008A3B01 /* MANYZhiController.m in Sources */,
@@ -1186,6 +1218,8 @@
 				A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */,
 				A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
+				A9E137C21BFC712D001DED22 /* PSCollectionViewCell.m in Sources */,
+				A9E137C91BFC7442001DED22 /* MANYMovieDetailController.m in Sources */,
 				A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */,
 				A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */,
 				A9E137B81BFC4B53001DED22 /* MANYMovieNetManager.m in Sources */,
