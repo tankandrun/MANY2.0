@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Category.h"
+#import "MANYMovieNetManager.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self initializeWithApplication:application];
-
+    
     return YES;
 }
 

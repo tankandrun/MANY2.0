@@ -118,6 +118,9 @@
 		A9E137AA1BFC1120001DED22 /* MANYShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137A91BFC1120001DED22 /* MANYShareController.m */; };
 		A9E137B11BFC1C25001DED22 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E137AC1BFC1C25001DED22 /* libSocialWechat.a */; };
 		A9E137B21BFC1C25001DED22 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E137AD1BFC1C25001DED22 /* libWeChatSDK.a */; };
+		A9E137B51BFC2CB2001DED22 /* MANYMovieDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137B41BFC2CB2001DED22 /* MANYMovieDetailModel.m */; };
+		A9E137B81BFC4B53001DED22 /* MANYMovieNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137B71BFC4B53001DED22 /* MANYMovieNetManager.m */; };
+		A9E137BB1BFC4E67001DED22 /* MANYMovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137BA1BFC4E67001DED22 /* MANYMovieViewModel.m */; };
 		A9F3A21C1BF1F11B00246D62 /* MANYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21B1BF1F11B00246D62 /* MANYTool.m */; };
 		A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21E1BF1F13800246D62 /* MANYImageView.m */; };
 /* End PBXBuildFile section */
@@ -329,6 +332,12 @@
 		A9E137AE1BFC1C25001DED22 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		A9E137AF1BFC1C25001DED22 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		A9E137B01BFC1C25001DED22 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		A9E137B31BFC2CB2001DED22 /* MANYMovieDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieDetailModel.h; sourceTree = "<group>"; };
+		A9E137B41BFC2CB2001DED22 /* MANYMovieDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieDetailModel.m; sourceTree = "<group>"; };
+		A9E137B61BFC4B53001DED22 /* MANYMovieNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieNetManager.h; sourceTree = "<group>"; };
+		A9E137B71BFC4B53001DED22 /* MANYMovieNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieNetManager.m; sourceTree = "<group>"; };
+		A9E137B91BFC4E67001DED22 /* MANYMovieViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewModel.h; sourceTree = "<group>"; };
+		A9E137BA1BFC4E67001DED22 /* MANYMovieViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewModel.m; sourceTree = "<group>"; };
 		A9F3A21A1BF1F11B00246D62 /* MANYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYTool.h; sourceTree = "<group>"; };
 		A9F3A21B1BF1F11B00246D62 /* MANYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYTool.m; sourceTree = "<group>"; };
 		A9F3A21D1BF1F13800246D62 /* MANYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYImageView.h; sourceTree = "<group>"; };
@@ -463,6 +472,8 @@
 				A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */,
 				A992CD1A1BFA10CA001972DE /* MANYMovieModel.h */,
 				A992CD1B1BFA10CA001972DE /* MANYMovieModel.m */,
+				A9E137B31BFC2CB2001DED22 /* MANYMovieDetailModel.h */,
+				A9E137B41BFC2CB2001DED22 /* MANYMovieDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -476,6 +487,8 @@
 				A996B6881BEA2858001CB4EF /* MANYNetManager.m */,
 				A988A9A81BF072660080019C /* MANYZhiNetManager.h */,
 				A988A9A91BF072660080019C /* MANYZhiNetManager.m */,
+				A9E137B61BFC4B53001DED22 /* MANYMovieNetManager.h */,
+				A9E137B71BFC4B53001DED22 /* MANYMovieNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -551,6 +564,8 @@
 				A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */,
 				A988A9ED1BF08B4D0080019C /* MANYZhiViewModel.h */,
 				A988A9EE1BF08B4D0080019C /* MANYZhiViewModel.m */,
+				A9E137B91BFC4E67001DED22 /* MANYMovieViewModel.h */,
+				A9E137BA1BFC4E67001DED22 /* MANYMovieViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1119,6 +1134,7 @@
 				A90081251BF38379008A3B01 /* MANYSettingViewController.m in Sources */,
 				A996B6EA1BEA2927001CB4EF /* UITableView+NightVersion.m in Sources */,
 				A996B6E71BEA2927001CB4EF /* UINavigationBar+TintColor.m in Sources */,
+				A9E137B51BFC2CB2001DED22 /* MANYMovieDetailModel.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */,
 				A996B6E51BEA2927001CB4EF /* UILabel+TextColor.m in Sources */,
@@ -1166,11 +1182,13 @@
 				A996B6DE1BEA2927001CB4EF /* UIImageView+NightImage.m in Sources */,
 				A996B6E21BEA2927001CB4EF /* UIButton+NightVersion.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
+				A9E137BB1BFC4E67001DED22 /* MANYMovieViewModel.m in Sources */,
 				A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */,
 				A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 				A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */,
 				A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */,
+				A9E137B81BFC4B53001DED22 /* MANYMovieNetManager.m in Sources */,
 				A996B6E61BEA2927001CB4EF /* UINavigationBar+NightVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

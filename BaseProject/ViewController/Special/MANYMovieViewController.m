@@ -7,17 +7,25 @@
 //
 
 #import "MANYMovieViewController.h"
+#import "MANYMovieViewModel.h"
 
 @interface MANYMovieViewController ()
+@property (nonatomic,strong) MANYMovieViewModel *moviewVM;
 
 @end
 
 @implementation MANYMovieViewController
-
+- (MANYMovieViewModel *)moviewVM {
+    if (!_moviewVM) {
+        _moviewVM = [MANYMovieViewModel new];
+    }
+    return _moviewVM;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
+   
 }
 
 - (void)didReceiveMemoryWarning {

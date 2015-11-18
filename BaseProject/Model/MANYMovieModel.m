@@ -10,4 +10,32 @@
 
 @implementation MANYMovieModel
 
+
++ (NSDictionary *)objectClassInArray{
+    return @{@"movies" : [MoviesModel class]};
+}
 @end
+@implementation Toplist
++ (NSDictionary *)replacedKeyFromPropertyName {
+    return @{@"iD":@"id"};
+}
+@end
+
+
+@implementation Nexttoplist
+
+@end
+
+
+@implementation Previoustoplist
+
+@end
+
+
+@implementation MoviesModel
++ (NSDictionary *)replacedKeyFromPropertyName {
+    return @{@"iD":@"id"};
+}
+@end
+
+
