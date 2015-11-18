@@ -90,8 +90,6 @@
 		A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6791BEA2831001CB4EF /* MANYHomeModel.m */; };
 		A996B6831BEA2832001CB4EF /* MANYReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */; };
 		A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6881BEA2858001CB4EF /* MANYNetManager.m */; };
-		A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B68F1BEA2927001CB4EF /* TYAlertController+BlurEffects.m */; };
-		A996B6DA1BEA2927001CB4EF /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6911BEA2927001CB4EF /* UIImage+ImageEffects.m */; };
 		A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6951BEA2927001CB4EF /* UIViewController+ChangeColor.m */; };
 		A996B6DC1BEA2927001CB4EF /* DKNightVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6981BEA2927001CB4EF /* DKNightVersionManager.m */; };
 		A996B6DD1BEA2927001CB4EF /* DKNightVersionUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B69C1BEA2927001CB4EF /* DKNightVersionUtility.m */; };
@@ -111,22 +109,15 @@
 		A996B6EB1BEA2927001CB4EF /* UITableView+SeparatorColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6BF1BEA2927001CB4EF /* UITableView+SeparatorColor.m */; };
 		A996B6EC1BEA2927001CB4EF /* UIView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6C21BEA2927001CB4EF /* UIView+BackgroundColor.m */; };
 		A996B6ED1BEA2927001CB4EF /* UIView+NightVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6C41BEA2927001CB4EF /* UIView+NightVersion.m */; };
-		A996B6EE1BEA2927001CB4EF /* TYAlertController+TransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6C61BEA2927001CB4EF /* TYAlertController+TransitionAnimate.m */; };
-		A996B6EF1BEA2927001CB4EF /* TYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6C81BEA2927001CB4EF /* TYAlertController.m */; };
-		A996B6F01BEA2927001CB4EF /* TYAlertDropDownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6CA1BEA2927001CB4EF /* TYAlertDropDownAnimation.m */; };
-		A996B6F11BEA2927001CB4EF /* TYAlertFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6CC1BEA2927001CB4EF /* TYAlertFadeAnimation.m */; };
-		A996B6F21BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6CE1BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m */; };
-		A996B6F31BEA2927001CB4EF /* TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D01BEA2927001CB4EF /* TYAlertView.m */; };
-		A996B6F41BEA2927001CB4EF /* TYBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D21BEA2927001CB4EF /* TYBaseAnimation.m */; };
-		A996B6F51BEA2927001CB4EF /* TYShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D41BEA2927001CB4EF /* TYShowAlertView.m */; };
-		A996B6F61BEA2927001CB4EF /* UIView+TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */; };
-		A996B6F71BEA2927001CB4EF /* UIView+TYAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */; };
 		A996B7071BEA2944001CB4EF /* MANYShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7011BEA2944001CB4EF /* MANYShareView.m */; };
 		A996B7081BEA2944001CB4EF /* MANYShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A996B7021BEA2944001CB4EF /* MANYShareView.xib */; };
 		A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70B1BEA295C001CB4EF /* MANYTabBarController.m */; };
 		A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */; };
 		A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */; };
 		A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BF70751BF0CEF100099014 /* MANYZhiCell.m */; };
+		A9E137AA1BFC1120001DED22 /* MANYShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137A91BFC1120001DED22 /* MANYShareController.m */; };
+		A9E137B11BFC1C25001DED22 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E137AC1BFC1C25001DED22 /* libSocialWechat.a */; };
+		A9E137B21BFC1C25001DED22 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E137AD1BFC1C25001DED22 /* libWeChatSDK.a */; };
 		A9F3A21C1BF1F11B00246D62 /* MANYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21B1BF1F11B00246D62 /* MANYTool.m */; };
 		A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3A21E1BF1F13800246D62 /* MANYImageView.m */; };
 /* End PBXBuildFile section */
@@ -281,10 +272,6 @@
 		A996B67B1BEA2832001CB4EF /* MANYReadingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingModel.m; sourceTree = "<group>"; };
 		A996B6871BEA2858001CB4EF /* MANYNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYNetManager.h; sourceTree = "<group>"; };
 		A996B6881BEA2858001CB4EF /* MANYNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYNetManager.m; sourceTree = "<group>"; };
-		A996B68E1BEA2927001CB4EF /* TYAlertController+BlurEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TYAlertController+BlurEffects.h"; sourceTree = "<group>"; };
-		A996B68F1BEA2927001CB4EF /* TYAlertController+BlurEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TYAlertController+BlurEffects.m"; sourceTree = "<group>"; };
-		A996B6901BEA2927001CB4EF /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		A996B6911BEA2927001CB4EF /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		A996B6941BEA2927001CB4EF /* UIViewController+ChangeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChangeColor.h"; sourceTree = "<group>"; };
 		A996B6951BEA2927001CB4EF /* UIViewController+ChangeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChangeColor.m"; sourceTree = "<group>"; };
 		A996B6971BEA2927001CB4EF /* DKNightVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightVersionManager.h; sourceTree = "<group>"; };
@@ -324,25 +311,6 @@
 		A996B6C21BEA2927001CB4EF /* UIView+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackgroundColor.m"; sourceTree = "<group>"; };
 		A996B6C31BEA2927001CB4EF /* UIView+NightVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NightVersion.h"; sourceTree = "<group>"; };
 		A996B6C41BEA2927001CB4EF /* UIView+NightVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NightVersion.m"; sourceTree = "<group>"; };
-		A996B6C61BEA2927001CB4EF /* TYAlertController+TransitionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TYAlertController+TransitionAnimate.m"; sourceTree = "<group>"; };
-		A996B6C71BEA2927001CB4EF /* TYAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAlertController.h; sourceTree = "<group>"; };
-		A996B6C81BEA2927001CB4EF /* TYAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAlertController.m; sourceTree = "<group>"; };
-		A996B6C91BEA2927001CB4EF /* TYAlertDropDownAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAlertDropDownAnimation.h; sourceTree = "<group>"; };
-		A996B6CA1BEA2927001CB4EF /* TYAlertDropDownAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAlertDropDownAnimation.m; sourceTree = "<group>"; };
-		A996B6CB1BEA2927001CB4EF /* TYAlertFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAlertFadeAnimation.h; sourceTree = "<group>"; };
-		A996B6CC1BEA2927001CB4EF /* TYAlertFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAlertFadeAnimation.m; sourceTree = "<group>"; };
-		A996B6CD1BEA2927001CB4EF /* TYAlertScaleFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAlertScaleFadeAnimation.h; sourceTree = "<group>"; };
-		A996B6CE1BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAlertScaleFadeAnimation.m; sourceTree = "<group>"; };
-		A996B6CF1BEA2927001CB4EF /* TYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAlertView.h; sourceTree = "<group>"; };
-		A996B6D01BEA2927001CB4EF /* TYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAlertView.m; sourceTree = "<group>"; };
-		A996B6D11BEA2927001CB4EF /* TYBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYBaseAnimation.h; sourceTree = "<group>"; };
-		A996B6D21BEA2927001CB4EF /* TYBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYBaseAnimation.m; sourceTree = "<group>"; };
-		A996B6D31BEA2927001CB4EF /* TYShowAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYShowAlertView.h; sourceTree = "<group>"; };
-		A996B6D41BEA2927001CB4EF /* TYShowAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYShowAlertView.m; sourceTree = "<group>"; };
-		A996B6D51BEA2927001CB4EF /* UIView+TYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYAlertView.h"; sourceTree = "<group>"; };
-		A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYAlertView.m"; sourceTree = "<group>"; };
-		A996B6D71BEA2927001CB4EF /* UIView+TYAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYAutoLayout.h"; sourceTree = "<group>"; };
-		A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYAutoLayout.m"; sourceTree = "<group>"; };
 		A996B7001BEA2944001CB4EF /* MANYShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYShareView.h; sourceTree = "<group>"; };
 		A996B7011BEA2944001CB4EF /* MANYShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYShareView.m; sourceTree = "<group>"; };
 		A996B7021BEA2944001CB4EF /* MANYShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MANYShareView.xib; sourceTree = "<group>"; };
@@ -354,6 +322,13 @@
 		A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingViewModel.m; sourceTree = "<group>"; };
 		A9BF70741BF0CEF100099014 /* MANYZhiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiCell.h; sourceTree = "<group>"; };
 		A9BF70751BF0CEF100099014 /* MANYZhiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiCell.m; sourceTree = "<group>"; };
+		A9E137A81BFC1120001DED22 /* MANYShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYShareController.h; sourceTree = "<group>"; };
+		A9E137A91BFC1120001DED22 /* MANYShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYShareController.m; sourceTree = "<group>"; };
+		A9E137AC1BFC1C25001DED22 /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
+		A9E137AD1BFC1C25001DED22 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		A9E137AE1BFC1C25001DED22 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
+		A9E137AF1BFC1C25001DED22 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		A9E137B01BFC1C25001DED22 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		A9F3A21A1BF1F11B00246D62 /* MANYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYTool.h; sourceTree = "<group>"; };
 		A9F3A21B1BF1F11B00246D62 /* MANYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYTool.m; sourceTree = "<group>"; };
 		A9F3A21D1BF1F13800246D62 /* MANYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYImageView.h; sourceTree = "<group>"; };
@@ -372,10 +347,12 @@
 				A94001C91BF4C00F00AF106D /* libUMSocial_Sdk_Comment_4.3.a in Frameworks */,
 				A94001D41BF4C00F00AF106D /* libSocialSinaSSO.a in Frameworks */,
 				A94001DD1BF4C00F00AF106D /* libUMSocial_Sdk_Shake_1.0.a in Frameworks */,
+				A9E137B21BFC1C25001DED22 /* libWeChatSDK.a in Frameworks */,
 				3885C9091BE8EA6A009441EA /* libstdc++.tbd in Frameworks */,
 				A94001D31BF4C00F00AF106D /* libSocialSina.a in Frameworks */,
 				3885C9071BE8EA62009441EA /* CoreTelephony.framework in Frameworks */,
 				3885C9051BE8EA5C009441EA /* libsqlite3.tbd in Frameworks */,
+				A9E137B11BFC1C25001DED22 /* libSocialWechat.a in Frameworks */,
 				3885C9031BE8EA54009441EA /* CoreGraphics.framework in Frameworks */,
 				3885C9011BE8EA4E009441EA /* libiconv.tbd in Frameworks */,
 				3885C8FF1BE8EA46009441EA /* Security.framework in Frameworks */,
@@ -529,9 +506,7 @@
 				A94001EA1BF4C02B00AF106D /* WeiboSDK */,
 				A940017D1BF4BFF000AF106D /* 友盟分享 */,
 				A938519A1BF432A800E05730 /* UMAnalytics_Sdk_3.6.4 */,
-				A996B68D1BEA2927001CB4EF /* Blur Effects */,
 				A996B6921BEA2927001CB4EF /* DKNightVersion */,
-				A996B6C51BEA2927001CB4EF /* TYAlertController */,
 				3885C8951BE8E88D009441EA /* iCarousel */,
 			);
 			path = Vendor;
@@ -694,6 +669,7 @@
 		A940019A1BF4C00F00AF106D /* UMSocial_Sdk_Extra_Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9E137AB1BFC1C25001DED22 /* Wechat */,
 				A940019B1BF4C00F00AF106D /* Sina */,
 				A940019E1BF4C00F00AF106D /* SinaSSO */,
 				A94001AD1BF4C00F00AF106D /* TencentOpenAPI */,
@@ -788,17 +764,6 @@
 			children = (
 			);
 			name = WeiboSDK;
-			sourceTree = "<group>";
-		};
-		A996B68D1BEA2927001CB4EF /* Blur Effects */ = {
-			isa = PBXGroup;
-			children = (
-				A996B68E1BEA2927001CB4EF /* TYAlertController+BlurEffects.h */,
-				A996B68F1BEA2927001CB4EF /* TYAlertController+BlurEffects.m */,
-				A996B6901BEA2927001CB4EF /* UIImage+ImageEffects.h */,
-				A996B6911BEA2927001CB4EF /* UIImage+ImageEffects.m */,
-			);
-			path = "Blur Effects";
 			sourceTree = "<group>";
 		};
 		A996B6921BEA2927001CB4EF /* DKNightVersion */ = {
@@ -935,39 +900,27 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		A996B6C51BEA2927001CB4EF /* TYAlertController */ = {
-			isa = PBXGroup;
-			children = (
-				A996B6C61BEA2927001CB4EF /* TYAlertController+TransitionAnimate.m */,
-				A996B6C71BEA2927001CB4EF /* TYAlertController.h */,
-				A996B6C81BEA2927001CB4EF /* TYAlertController.m */,
-				A996B6C91BEA2927001CB4EF /* TYAlertDropDownAnimation.h */,
-				A996B6CA1BEA2927001CB4EF /* TYAlertDropDownAnimation.m */,
-				A996B6CB1BEA2927001CB4EF /* TYAlertFadeAnimation.h */,
-				A996B6CC1BEA2927001CB4EF /* TYAlertFadeAnimation.m */,
-				A996B6CD1BEA2927001CB4EF /* TYAlertScaleFadeAnimation.h */,
-				A996B6CE1BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m */,
-				A996B6CF1BEA2927001CB4EF /* TYAlertView.h */,
-				A996B6D01BEA2927001CB4EF /* TYAlertView.m */,
-				A996B6D11BEA2927001CB4EF /* TYBaseAnimation.h */,
-				A996B6D21BEA2927001CB4EF /* TYBaseAnimation.m */,
-				A996B6D31BEA2927001CB4EF /* TYShowAlertView.h */,
-				A996B6D41BEA2927001CB4EF /* TYShowAlertView.m */,
-				A996B6D51BEA2927001CB4EF /* UIView+TYAlertView.h */,
-				A996B6D61BEA2927001CB4EF /* UIView+TYAlertView.m */,
-				A996B6D71BEA2927001CB4EF /* UIView+TYAutoLayout.h */,
-				A996B6D81BEA2927001CB4EF /* UIView+TYAutoLayout.m */,
-			);
-			path = TYAlertController;
-			sourceTree = "<group>";
-		};
 		A996B7091BEA295C001CB4EF /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				A996B70A1BEA295C001CB4EF /* MANYTabBarController.h */,
 				A996B70B1BEA295C001CB4EF /* MANYTabBarController.m */,
+				A9E137A81BFC1120001DED22 /* MANYShareController.h */,
+				A9E137A91BFC1120001DED22 /* MANYShareController.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		A9E137AB1BFC1C25001DED22 /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				A9E137AC1BFC1C25001DED22 /* libSocialWechat.a */,
+				A9E137AD1BFC1C25001DED22 /* libWeChatSDK.a */,
+				A9E137AE1BFC1C25001DED22 /* UMSocialWechatHandler.h */,
+				A9E137AF1BFC1C25001DED22 /* WXApi.h */,
+				A9E137B01BFC1C25001DED22 /* WXApiObject.h */,
+			);
+			path = Wechat;
 			sourceTree = "<group>";
 		};
 		A9F3A2191BF1F11B00246D62 /* Tool */ = {
@@ -1163,21 +1116,16 @@
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
 				A996B6E81BEA2927001CB4EF /* UITabBar+BarTintColor.m in Sources */,
 				A996B6ED1BEA2927001CB4EF /* UIView+NightVersion.m in Sources */,
-				A996B6EF1BEA2927001CB4EF /* TYAlertController.m in Sources */,
 				A90081251BF38379008A3B01 /* MANYSettingViewController.m in Sources */,
 				A996B6EA1BEA2927001CB4EF /* UITableView+NightVersion.m in Sources */,
 				A996B6E71BEA2927001CB4EF /* UINavigationBar+TintColor.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */,
-				A996B6F31BEA2927001CB4EF /* TYAlertView.m in Sources */,
 				A996B6E51BEA2927001CB4EF /* UILabel+TextColor.m in Sources */,
 				A996B6DF1BEA2927001CB4EF /* UINavigationBar+Animation.m in Sources */,
 				A996B6E91BEA2927001CB4EF /* UITabBar+NightVersion.m in Sources */,
 				A996B6EB1BEA2927001CB4EF /* UITableView+SeparatorColor.m in Sources */,
-				A996B6F11BEA2927001CB4EF /* TYAlertFadeAnimation.m in Sources */,
 				A988A9A71BF070040080019C /* MANYZhiModel.m in Sources */,
-				A996B6F71BEA2927001CB4EF /* UIView+TYAutoLayout.m in Sources */,
-				A996B6D91BEA2927001CB4EF /* TYAlertController+BlurEffects.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				A996B6821BEA2832001CB4EF /* MANYHomeModel.m in Sources */,
 				A9F3A21C1BF1F11B00246D62 /* MANYTool.m in Sources */,
@@ -1186,33 +1134,28 @@
 				A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */,
 				A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */,
 				A900811C1BF382DF008A3B01 /* MANYMeController.m in Sources */,
+				A9E137AA1BFC1120001DED22 /* MANYShareController.m in Sources */,
 				A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */,
 				A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */,
 				A900811F1BF382DF008A3B01 /* MANYZhiSkipController.m in Sources */,
 				A996B6E01BEA2927001CB4EF /* UIBarButtonItem+NightVersion.m in Sources */,
 				A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */,
-				A996B6F01BEA2927001CB4EF /* TYAlertDropDownAnimation.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				A996B7071BEA2944001CB4EF /* MANYShareView.m in Sources */,
 				A996B6EC1BEA2927001CB4EF /* UIView+BackgroundColor.m in Sources */,
-				A996B6F51BEA2927001CB4EF /* TYShowAlertView.m in Sources */,
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
-				A996B6DA1BEA2927001CB4EF /* UIImage+ImageEffects.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				A900811E1BF382DF008A3B01 /* MANYZhiDetailController.m in Sources */,
 				A93851E21BF4AB1100E05730 /* MANYSurperiseView.m in Sources */,
 				A996B6DD1BEA2927001CB4EF /* DKNightVersionUtility.m in Sources */,
 				A996B6E41BEA2927001CB4EF /* UILabel+NightVersion.m in Sources */,
-				A996B6EE1BEA2927001CB4EF /* TYAlertController+TransitionAnimate.m in Sources */,
 				A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */,
 				A996B6DC1BEA2927001CB4EF /* DKNightVersionManager.m in Sources */,
-				A996B6F41BEA2927001CB4EF /* TYBaseAnimation.m in Sources */,
 				A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */,
 				A996B6E31BEA2927001CB4EF /* UIButton+TitleColor.m in Sources */,
 				A992CD1C1BFA10CA001972DE /* MANYMovieModel.m in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
 				A992CD191BFA0E10001972DE /* MANYMovieViewController.m in Sources */,
-				A996B6F21BEA2927001CB4EF /* TYAlertScaleFadeAnimation.m in Sources */,
 				A93851A11BF43E1900E05730 /* MANYFeedBackController.m in Sources */,
 				A90081281BF3838D008A3B01 /* MANYAboutViewController.m in Sources */,
 				A900811D1BF382DF008A3B01 /* MANYZhiController.m in Sources */,
@@ -1226,7 +1169,6 @@
 				A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */,
 				A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
-				A996B6F61BEA2927001CB4EF /* UIView+TYAlertView.m in Sources */,
 				A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */,
 				A93C61AB1BEA3BBC00167BEB /* MANYHomeCell.m in Sources */,
 				A996B6E61BEA2927001CB4EF /* UINavigationBar+NightVersion.m in Sources */,
@@ -1366,6 +1308,7 @@
 					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/UMSocial_ScreenShot_Sdk",
 					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/UMSocial_Shake_Sdk",
+					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myMany;
 				PRODUCT_NAME = MANY;
@@ -1400,6 +1343,7 @@
 					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/UMSocial_ScreenShot_Sdk",
 					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/UMSocial_Shake_Sdk",
+					"$(PROJECT_DIR)/BaseProject/Vendor/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myMany;
 				PRODUCT_NAME = MANY;

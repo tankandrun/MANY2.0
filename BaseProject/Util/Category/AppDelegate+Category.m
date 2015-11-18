@@ -15,6 +15,7 @@
 #import "UMSocialSinaHandler.h"//非原生SDK
 //#import "UMSocialSinaSSOHandler.h"
 #import "UMSocialQQHandler.h"
+#import "UMSocialWechatHandler.h"
 
 
 @implementation AppDelegate (Category)
@@ -53,8 +54,10 @@
     
     [UMSocialData setAppKey:@"563724cbe0f55a25b0000aa9"];
     [UMSocialSinaHandler openSSOWithRedirectURL:nil];
-    
+    //QQ分享
     [UMSocialQQHandler setQQWithAppId:@"1104853793" appKey:@"vq90I7z9Cq5Cv4CU" url:nil];
+    //微信分享
+    [UMSocialWechatHandler setWXAppId:@"wx945b58aef3a271f0" appSecret:@"0ae78dd42761fd9681b04833c79a857b" url:nil];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url

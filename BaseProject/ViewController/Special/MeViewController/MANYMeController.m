@@ -27,6 +27,7 @@
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc]init];
         _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.nightBackgroundColor = kRGBColor(40, 40, 40);
     }
     return _tableView;
 }
@@ -34,6 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.hidden = NO;
+    self.navigationController.navigationBar.nightBarTintColor = kRGBColor(30, 30, 30);
 }
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -44,8 +46,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
         cell.textLabel.font = [UIFont systemFontOfSize:15];
-        cell.textLabel.textColor = myTextRGB;
+        cell.textLabel.textColor = kRGBColor(100, 100, 100);
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.backgroundColor = [UIColor clearColor];
     }
     if (indexPath.row == 0) {
         cell.imageView.image = [UIImage imageNamed:@"login"];

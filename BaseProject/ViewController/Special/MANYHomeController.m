@@ -66,6 +66,7 @@
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
+    tableView.nightBackgroundColor = kRGBColor(40, 40, 40);
     tableView.delegate = self;
     tableView.dataSource = self;
     self.tableView = tableView;
@@ -106,6 +107,7 @@ static int dex = 0;
     MANYHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"home"];
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MANYHomeCell" owner:self options:nil] lastObject];
+        cell.backgroundColor = [UIColor clearColor];
     }
     //设置cell不会被点击，但是上面的button能够被相应
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

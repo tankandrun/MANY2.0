@@ -7,7 +7,6 @@
 //
 
 #import "MANYShareView.h"
-#import "UIView+TYAlertView.h"
 #import "UMSocial.h"
 
 @interface MANYShareView()
@@ -18,21 +17,18 @@
 
 @implementation MANYShareView
 - (IBAction)dismiss:(id)sender {
-    [self hideView];
+    [_delegate dismiss];
 }
 - (IBAction)addCollection:(id)sender {
-    
     self.colBtn.selected = !self.colBtn.isSelected;
     if (self.colBtn.selected) {
         NSLog(@"加入收藏");
     }
 }
 - (IBAction)saveImg:(id)sender {
-    [self hideView];
     NSLog(@"保存图片");
 }
 - (IBAction)fontChange:(id)sender {
-    [self hideView];
     NSLog(@"改字体");
 //    [UMSocialSnsService presentSnsIconSheetView:[self viewController]
 //                                         appKey:@"563724cbe0f55a25b0000aa9"
@@ -42,26 +38,32 @@
 //                                       delegate:nil];
 }
 - (IBAction)nightMod:(id)sender {
-    [self hideView];
     self.nightLB.text = @"日间模式";
     if ([DKNightVersionManager currentThemeVersion] == DKThemeVersionNight) {
         [DKNightVersionManager dawnComing];
     } else {
         [DKNightVersionManager nightFalling];
     }
-    
-    
 }
-//获取到当前view的Controller
-- (UIViewController *)viewController {
-    for (UIView *next = [self superview]; next; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    return nil;
+#pragma mark - 分享按钮
+- (IBAction)shareToWibo:(id)sender {
+    [_delegate gotoNextView];
 }
+- (IBAction)shareToWXFri:(id)sender {
+    [_delegate gotoNextView];
+}
+- (IBAction)shareToTimeLine:(id)sender {
+    [_delegate gotoNextView];
+}
+- (IBAction)shareToQQFri:(id)sender {
+    [_delegate gotoNextView];
+}
+
+
+
+
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

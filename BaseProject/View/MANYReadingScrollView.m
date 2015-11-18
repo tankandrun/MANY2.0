@@ -22,6 +22,7 @@
 #warning scroll的高度在这里
     contentView.frame = CGRectMake(0, 0, kWindowW, 2500);
     [self addSubview:contentView];
+    contentView.nightBackgroundColor = kRGBColor(40, 40, 40);
     self.contentSize = contentView.frame.size;
     
     self.dateLB = [[UILabel alloc]init];
@@ -66,7 +67,8 @@
     self.contentTV.textContainerInset = UIEdgeInsetsMake(8, 0, 8, 0);
     self.contentTV.editable = NO;
     self.contentTV.scrollEnabled = NO;
-//    self.contentTV.backgroundColor = [UIColor redColor];
+    self.contentTV.textColor = kRGBColor(100, 100, 100);
+    self.contentTV.backgroundColor = [UIColor clearColor];
     [self addSubview:self.contentTV];
     [self.contentTV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.zuozheLB.mas_bottom).mas_equalTo(10);
@@ -91,6 +93,9 @@
     self.pnButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.pnButton setImage:[UIImage imageNamed:@"home_like"] forState:UIControlStateNormal];
     [self.pnButton setImage:[UIImage imageNamed:@"home_like_hl"] forState:UIControlStateSelected];
+    [self.pnButton setNightImageN:[UIImage imageNamed:@"home_like"]];
+    [self.pnButton setNightImageS:[UIImage imageNamed:@"home_like_hl"]];
+    [self.pnButton setNightImageH:[UIImage imageNamed:@"home_like_hl"]];
     [self.pnButton setTitle:@"12345" forState:UIControlStateNormal];
     self.pnButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [self.pnButton setTitleColor:myTextRGB forState:UIControlStateNormal];

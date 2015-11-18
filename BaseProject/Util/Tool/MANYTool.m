@@ -8,9 +8,7 @@
 
 #import "MANYTool.h"
 #import "BaseViewModel.h"
-#import "UIView+TYAlertView.h"
-#import "TYAlertController+BlurEffects.h"
-#import "MANYShareView.h"
+#import "MANYShareController.h"
 @implementation MANYTool
 
 + (NSDate *)dateFromString:(NSString *)dateStr {
@@ -68,15 +66,20 @@
 + (void)addNaviBarToSuperView:(UIView *)view withTarget:(id)target {
     UINavigationBar *naviBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, kWindowW, 64)];
     naviBar.backgroundColor = kRGBColor(245, 245, 245);
+    naviBar.nightBarTintColor = kRGBColor(30, 30, 30);
     [self addTopLogoToNaviBar:naviBar];
     UIButton *shareButton = [[UIButton alloc]initWithFrame:CGRectMake(340, 30, 22, 22)];
     [shareButton setImage:[UIImage imageNamed:@"shareBtn"] forState:(UIControlStateNormal)];
-    //    shareButton.nightImageN = [UIImage imageNamed:@"shareBtn"];
+        shareButton.nightImageN = [UIImage imageNamed:@"shareBtn"];
     [shareButton bk_addEventHandler:^(id sender) {
-        MANYShareView *shareView = [MANYShareView createViewFromNib];
-        TYAlertController *alertController = [TYAlertController alertControllerWithAlertView:shareView preferredStyle:(TYAlertControllerStyleActionSheet)];
-        alertController.backgoundTapDismissEnable = YES;
-        [target presentViewController:alertController animated:YES completion:nil];
+        MANYShareController *shareView = [[MANYShareController alloc]init];
+//        target.definesPresentationContext = YES; //self is presenting view controller
+        shareView.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        shareView.view.nightBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
+        shareView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        shareView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        [target presentViewController:shareView animated:YES completion:nil];
     } forControlEvents:(UIControlEventTouchUpInside)];
     [naviBar addSubview:shareButton];
     [view addSubview:naviBar];
@@ -93,6 +96,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@"navBackBtn"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"navBackBtn"] forState:UIControlStateHighlighted];
+    [btn setNightImageN:[UIImage imageNamed:@"navBackBtn"]];
     btn.frame = CGRectMake(0, 0, 45, 44);
     [btn bk_addEventHandler:^(id sender) {
         [vc.navigationController popViewControllerAnimated:YES];

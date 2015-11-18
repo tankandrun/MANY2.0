@@ -50,6 +50,7 @@
         
         UIButton *back = [[UIButton alloc]init];
         [back setImage:[UIImage imageNamed:@"navBackBtn"] forState:UIControlStateNormal];
+        [back setNightImageN:[UIImage imageNamed:@"navBackBtn"]];
         [_bottomBar addSubview:back];
         [back mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(44, 44));
