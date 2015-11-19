@@ -23,4 +23,8 @@
 - (NSString *)getsWbN;
 - (NSString *)getsAuth;
 
+
+- (void)getMoreDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle;
+- (void)refreshDataWithRow:(NSInteger)row CompletionHandle:(CompletionHandle)completionHandle;
+
 @end

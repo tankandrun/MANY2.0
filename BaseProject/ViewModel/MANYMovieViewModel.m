@@ -10,6 +10,12 @@
 #import "MANYMovieNetManager.h"
 
 @implementation MANYMovieViewModel
+- (NSMutableArray *)picPathArray {
+    if (!_picPathArray) {
+        _picPathArray = [NSMutableArray new];
+    }
+    return _picPathArray;
+}
 - (NSMutableArray *)movieList {
     if (!_movieList) {
         _movieList = [NSMutableArray new];
@@ -69,15 +75,21 @@
         
         if (pageIndex == 1) {
             [self.movieList removeAllObjects];
+            [self.picPathArray removeAllObjects];
         }
         [self.movieList addObjectsFromArray:model.movies];
+        for (int i = (((int)pageIndex-1)*20); i<self.movieList.count;i++) {
+            MoviesModel *model = self.movieList[i];
+            [self.picPathArray addObject:model.posterUrl];
+        }
         completionHandle(error);
     }];
 }
 #pragma mark - 请求电影详情数据
 - (void)getDetailDataWithName:(NSString *)name FromNetCompletionHandle:(CompletionHandle)completionHandle {
     [MANYMovieNetManager getDetailWithTitle:name completionHandle:^(MANYMovieDetailModel *model, NSError *error) {
-        self.movieDetail = model.subjects[1];
+        self.movieDetail = model.subjects[0];
+        NSLog(@"");
     }];
 }
 

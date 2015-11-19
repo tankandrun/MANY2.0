@@ -20,6 +20,10 @@
     // Override point for customization after application launch.
     [self initializeWithApplication:application];
     
+    NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"%@",filePath);
+    
+    
     return YES;
 }
 

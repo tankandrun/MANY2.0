@@ -23,4 +23,7 @@
 @property (nonatomic,strong) MovieDetailModel *movieDetail;
 - (void)getDetailDataWithName:(NSString *)name FromNetCompletionHandle:(CompletionHandle)completionHandle;
 
+@property (nonatomic,strong) NSMutableArray *picPathArray;
+
+
 @end

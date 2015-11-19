@@ -161,7 +161,7 @@ kRemoveCellSeparator
         }];
     }
     MANYImageView *imageView = (MANYImageView *)[view viewWithTag:100];
-    [imageView.imageView setImageWithURL:[self.zhiVM getTopImageForRow:index]];
+    [imageView.imageView sd_setImageWithURL:[self.zhiVM getTopImageForRow:index]];
     return view;
 }
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
@@ -197,7 +197,7 @@ kRemoveCellSeparator
         cell = [[MANYZhiCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     cell.titleLb.text = [self.zhiVM getTitleForRow:indexPath.row];
-    [cell.imgView.imageView setImageWithURL:[self.zhiVM getImageForRow:indexPath.row]];
+    [cell.imgView.imageView sd_setImageWithURL:[self.zhiVM getImageForRow:indexPath.row]];
     return cell;
 }
 

@@ -98,7 +98,14 @@ static int dex = 0;
         dex = (int)carousel.currentItemIndex;
     }
 }
-
+/** 允许循环滚动 */
+-(CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+{
+    if (option == iCarouselOptionWrap) {
+        return NO;
+    }
+    return value;
+}
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -117,7 +124,7 @@ static int dex = 0;
 }
 - (void)configureCell {
     self.cell.hpTitleLB.text = [self.homeVM getStrHpTitle];
-    [self.cell.homeImage setImageWithURL:[self.homeVM getThumbnailUrl]];
+    [self.cell.homeImage sd_setImageWithURL:[self.homeVM getThumbnailUrl]];
     self.cell.contentLB.text = [self.homeVM getStrContent];
     [self.cell.pnBtn setTitle:[self.homeVM getStrPn].stringValue forState:UIControlStateNormal];
     self.cell.zuozheLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][0];

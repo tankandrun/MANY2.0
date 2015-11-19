@@ -105,6 +105,10 @@ kRemoveCellSeparator
         MANYFeedBackController *vc = [[MANYFeedBackController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
+    if (indexPath.section == 2 && indexPath.row == 0) {
+        [[SDImageCache sharedImageCache] clearDisk];
+        [SVProgressHUD showInfoWithStatus:@"完成"];
+    }
 }
 
 
