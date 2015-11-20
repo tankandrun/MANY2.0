@@ -19,11 +19,20 @@
 - (NSString *)getNameForItem:(NSInteger)Item;
 - (NSString *)getNameENForItem:(NSInteger)Item;
 - (CGFloat)getRatingForItem:(NSInteger)Item;
+- (NSString *)getIntroForItem:(NSInteger)Item;
+
+@property (nonatomic,strong) NSMutableArray *picPathArray;
+
+
+
 
 @property (nonatomic,strong) MovieDetailModel *movieDetail;
 - (void)getDetailDataWithName:(NSString *)name FromNetCompletionHandle:(CompletionHandle)completionHandle;
+- (NSString *)getNameCH;
+- (NSString *)getNameEN;
+- (NSURL *)getDirectorImage;
+- (NSString *)getDirectorName;
 
-@property (nonatomic,strong) NSMutableArray *picPathArray;
 
 
 @end

@@ -91,21 +91,18 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     MANYMovieDetailController *vc = [[MANYMovieDetailController alloc]init];
     
-    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
-    vc.view.nightBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
-    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     NSString *str = [self.moviewVM getNameForItem:indexPath.row];
     NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)str,NULL,NULL,kCFStringEncodingUTF8));
-//    NSString *strTqWeb = [NSString stringWithFormat:@"https://api.douban.com/v2/movie/search?q=%@",encodedString];
-    
-    [self.moviewVM getDetailDataWithName:encodedString FromNetCompletionHandle:^(NSError *error) {
-        
-        NSLog(@"%@",self.moviewVM.movieDetail.original_title);
-    }];
-    
-    
+    vc.name = encodedString;
+    vc.mainImage = [self.moviewVM getImageForItem:indexPath.row];
+    vc.rating = [NSString stringWithFormat:@"%.01f",[self.moviewVM getRatingForItem:indexPath.row]];
+    vc.intro = [self.moviewVM getIntroForItem:indexPath.row];
+
+    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    vc.view.nightBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:nil];
 }
 

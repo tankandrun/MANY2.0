@@ -115,6 +115,7 @@
 		A996B7151BEA2975001CB4EF /* MANYHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B70E1BEA2975001CB4EF /* MANYHomeViewModel.m */; };
 		A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */; };
 		A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BF70751BF0CEF100099014 /* MANYZhiCell.m */; };
+		A9D74E3D1BFEF8E800401742 /* MANYMovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D74E3C1BFEF8E800401742 /* MANYMovieDetail.m */; };
 		A9E137AA1BFC1120001DED22 /* MANYShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E137A91BFC1120001DED22 /* MANYShareController.m */; };
 		A9E137B11BFC1C25001DED22 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E137AC1BFC1C25001DED22 /* libSocialWechat.a */; };
 		A9E137B21BFC1C25001DED22 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E137AD1BFC1C25001DED22 /* libWeChatSDK.a */; };
@@ -328,6 +329,8 @@
 		A996B7101BEA2975001CB4EF /* MANYReadingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingViewModel.m; sourceTree = "<group>"; };
 		A9BF70741BF0CEF100099014 /* MANYZhiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiCell.h; sourceTree = "<group>"; };
 		A9BF70751BF0CEF100099014 /* MANYZhiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiCell.m; sourceTree = "<group>"; };
+		A9D74E3B1BFEF8E800401742 /* MANYMovieDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieDetail.h; sourceTree = "<group>"; };
+		A9D74E3C1BFEF8E800401742 /* MANYMovieDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieDetail.m; sourceTree = "<group>"; };
 		A9E137A81BFC1120001DED22 /* MANYShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYShareController.h; sourceTree = "<group>"; };
 		A9E137A91BFC1120001DED22 /* MANYShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYShareController.m; sourceTree = "<group>"; };
 		A9E137AC1BFC1C25001DED22 /* libSocialWechat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialWechat.a; sourceTree = "<group>"; };
@@ -550,6 +553,8 @@
 				A996B7021BEA2944001CB4EF /* MANYShareView.xib */,
 				A93851E01BF4AB1100E05730 /* MANYSurperiseView.h */,
 				A93851E11BF4AB1100E05730 /* MANYSurperiseView.m */,
+				A9D74E3B1BFEF8E800401742 /* MANYMovieDetail.h */,
+				A9D74E3C1BFEF8E800401742 /* MANYMovieDetail.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1181,6 +1186,7 @@
 				A93C61A41BEA371B00167BEB /* MANYReadingController.m in Sources */,
 				A996B7161BEA2975001CB4EF /* MANYReadingViewModel.m in Sources */,
 				A9BF70761BF0CEF100099014 /* MANYZhiCell.m in Sources */,
+				A9D74E3D1BFEF8E800401742 /* MANYMovieDetail.m in Sources */,
 				A900811C1BF382DF008A3B01 /* MANYMeController.m in Sources */,
 				A9E137AA1BFC1120001DED22 /* MANYShareController.m in Sources */,
 				A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */,

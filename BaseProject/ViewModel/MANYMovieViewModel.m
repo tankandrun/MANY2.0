@@ -10,12 +10,12 @@
 #import "MANYMovieNetManager.h"
 
 @implementation MANYMovieViewModel
-- (NSMutableArray *)picPathArray {
-    if (!_picPathArray) {
-        _picPathArray = [NSMutableArray new];
-    }
-    return _picPathArray;
-}
+//- (NSMutableArray *)picPathArray {
+//    if (!_picPathArray) {
+//        _picPathArray = [NSMutableArray new];
+//    }
+//    return _picPathArray;
+//}
 - (NSMutableArray *)movieList {
     if (!_movieList) {
         _movieList = [NSMutableArray new];
@@ -28,14 +28,14 @@
     }
     return _pageIndex;
 }
-- (MovieDetailModel *)movieDetail {
-    if (!_movieDetail) {
-        _movieDetail = [MovieDetailModel new];
-    }
-    return _movieDetail;
-}
 - (NSInteger)allNum {
     return self.movieList.count;
+}
+- (MovieDetailModel *)movieDetail {
+    if (!_movieDetail) {
+        _movieDetail = [[MovieDetailModel alloc]init];
+    }
+    return _movieDetail;
 }
 #pragma mark - 配置
 - (NSURL *)getImageForItem:(NSInteger)Item {
@@ -53,6 +53,10 @@
 - (CGFloat)getRatingForItem:(NSInteger)Item {
     MoviesModel *model = self.movieList[Item];
     return model.rating;
+}
+- (NSString *)getIntroForItem:(NSInteger)Item {
+    MoviesModel *model = self.movieList[Item];
+    return model.remark;
 }
 
 #pragma mark - 请求电影列表的数据
@@ -89,9 +93,23 @@
 - (void)getDetailDataWithName:(NSString *)name FromNetCompletionHandle:(CompletionHandle)completionHandle {
     [MANYMovieNetManager getDetailWithTitle:name completionHandle:^(MANYMovieDetailModel *model, NSError *error) {
         self.movieDetail = model.subjects[0];
-        NSLog(@"");
+        completionHandle(error);
     }];
 }
-
+- (NSString *)getNameCH {
+    return self.movieDetail.title;
+}
+- (NSString *)getNameEN {
+    return self.movieDetail.original_title;
+}
+- (NSURL *)getDirectorImage {
+    Directors *director = self.movieDetail.directors[0];
+    Avatars *avatar = director.avatars;
+    return [NSURL URLWithString:avatar.large];
+}
+- (NSString *)getDirectorName {
+    Directors *director = self.movieDetail.directors[0];
+    return director.name;
+}
 
 @end
