@@ -9,7 +9,12 @@
 #import "MANYMovieDetail.h"
 
 @implementation MANYMovieDetail
-
+- (NSMutableArray *)tags {
+    if (!_tags) {
+        _tags = [NSMutableArray new];
+    }
+    return _tags;
+}
 - (id)init {
     if (self = [super init]) {
         [self setUpView];
@@ -79,6 +84,7 @@
         make.width.mas_equalTo(80);
     }];
 #warning 添加按钮
+    
     
     self.directorImage = [[MANYImageView alloc]init];
     [self addSubview:self.directorImage];

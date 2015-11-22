@@ -111,5 +111,9 @@
     Directors *director = self.movieDetail.directors[0];
     return director.name;
 }
+- (NSArray *)getTagsArray {
+    return self.movieDetail.genres;
+}
+
 
 @end

@@ -87,6 +87,9 @@
     [self.detailView.directorImage.imageView sd_setImageWithURL:[self.movieVM getDirectorImage]];
     self.detailView.directorNameLb.text = [self.movieVM getDirectorName];
     self.detailView.introLb.text = [NSString stringWithFormat:@"简介:\n%@",self.intro];
+    [self.detailView.tags removeAllObjects];
+    [self.detailView.tags addObjectsFromArray:[self.movieVM getTagsArray]];
+    NSLog(@"");
 }
 
 - (void)didReceiveMemoryWarning {

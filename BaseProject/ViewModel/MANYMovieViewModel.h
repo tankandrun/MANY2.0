@@ -32,6 +32,7 @@
 - (NSString *)getNameEN;
 - (NSURL *)getDirectorImage;
 - (NSString *)getDirectorName;
+- (NSArray *)getTagsArray;
 
 
 
