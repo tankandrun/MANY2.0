@@ -87,10 +87,90 @@
     [self.detailView.directorImage.imageView sd_setImageWithURL:[self.movieVM getDirectorImage]];
     self.detailView.directorNameLb.text = [self.movieVM getDirectorName];
     self.detailView.introLb.text = [NSString stringWithFormat:@"简介:\n%@",self.intro];
-    [self.detailView.tags removeAllObjects];
-    [self.detailView.tags addObjectsFromArray:[self.movieVM getTagsArray]];
-    NSLog(@"");
+#warning 按钮添加搜索更多电影功能
+    [self setButtons];
+    [self setCasts];
+    
 }
+- (void)setButtons {
+    NSMutableArray *tags = [NSMutableArray new];
+    [tags addObjectsFromArray:[self.movieVM getTagsArray]];
+    if (tags.count == 1) {
+        [self.detailView.tagButton1 setTitle:tags[0] forState:UIControlStateNormal];
+        self.detailView.tagButton2.hidden = YES;
+        self.detailView.tagButton3.hidden = YES;
+    }else if (tags.count == 2) {
+        [self.detailView.tagButton1 setTitle:tags[0] forState:UIControlStateNormal];
+        [self.detailView.tagButton2 setTitle:tags[1] forState:UIControlStateNormal];
+        self.detailView.tagButton3.hidden = YES;
+    }else {
+        [self.detailView.tagButton1 setTitle:tags[0] forState:UIControlStateNormal];
+        [self.detailView.tagButton2 setTitle:tags[1] forState:UIControlStateNormal];
+        [self.detailView.tagButton3 setTitle:tags[2] forState:UIControlStateNormal];
+    }
+}
+- (void)setCasts {
+    NSMutableArray *casts = [NSMutableArray new];
+    [casts addObjectsFromArray:[self.movieVM getCastsArray]];
+    if (casts.count == 1) {
+        self.detailView.castsScroll.scrollEnabled = NO;
+        Caasts *cast = casts[0];
+        self.detailView.cast1.name.text = cast.name;
+        AnotherAvatars *ava = cast.avatars;
+        [self.detailView.cast1.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava.large]];
+        self.detailView.cast2.hidden = YES;
+        self.detailView.cast3.hidden = YES;
+        self.detailView.cast4.hidden = YES;
+    }else if (casts.count == 2) {
+        self.detailView.castsScroll.scrollEnabled = NO;
+        Caasts *cast1 = casts[0];
+        self.detailView.cast1.name.text = cast1.name;
+        AnotherAvatars *ava1 = cast1.avatars;
+        [self.detailView.cast1.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava1.large]];
+        Caasts *cast2 = casts[1];
+        self.detailView.cast2.name.text = cast2.name;
+        AnotherAvatars *ava2= cast2.avatars;
+        [self.detailView.cast2.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava2.large]];
+        self.detailView.cast3.hidden = YES;
+        self.detailView.cast4.hidden = YES;
+    }else if (casts.count == 3) {
+        self.detailView.castsScroll.scrollEnabled = YES;
+        Caasts *cast1 = casts[0];
+        self.detailView.cast1.name.text = cast1.name;
+        AnotherAvatars *ava1 = cast1.avatars;
+        [self.detailView.cast1.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava1.large]];
+        Caasts *cast2 = casts[1];
+        self.detailView.cast2.name.text = cast2.name;
+        AnotherAvatars *ava2 = cast2.avatars;
+        [self.detailView.cast2.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava2.large]];
+        Caasts *cast3 = casts[2];
+        self.detailView.cast3.name.text = cast3.name;
+        AnotherAvatars *ava3 = cast3.avatars;
+        [self.detailView.cast3.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava3.large]];
+        self.detailView.cast4.hidden = YES;
+        self.detailView.castsScroll.contentSize = CGSizeMake((130.0/600*420+10)*3-10, 160);
+    }else {
+        self.detailView.castsScroll.scrollEnabled = YES;
+        Caasts *cast1 = casts[0];
+        self.detailView.cast1.name.text = cast1.name;
+        AnotherAvatars *ava1 = cast1.avatars;
+        [self.detailView.cast1.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava1.large]];
+        Caasts *cast2 = casts[1];
+        self.detailView.cast2.name.text = cast2.name;
+        AnotherAvatars *ava2 = cast2.avatars;
+        [self.detailView.cast2.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava2.large]];
+        Caasts *cast3 = casts[2];
+        self.detailView.cast3.name.text = cast3.name;
+        AnotherAvatars *ava3 = cast3.avatars;
+        [self.detailView.cast3.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava3.large]];
+        Caasts *cast4 = casts[3];
+        self.detailView.cast4.name.text = cast4.name;
+        AnotherAvatars *ava4 = cast4.avatars;
+        [self.detailView.cast4.castsImage.imageView sd_setImageWithURL:[NSURL URLWithString:ava4.large]];
+        self.detailView.castsScroll.contentSize = CGSizeMake((130.0/600*420+10)*4-10, 160);
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -33,7 +33,7 @@
 - (NSURL *)getDirectorImage;
 - (NSString *)getDirectorName;
 - (NSArray *)getTagsArray;
-
+- (NSArray *)getCastsArray;
 
 
 @end

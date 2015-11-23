@@ -70,31 +70,45 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     self.tableView = tableView;
-    
+    if (index != self.ic.currentItemIndex) {
+        UIView *cover = [[UIView alloc]init];
+        cover.frame = CGRectMake(0, 0, kWindowW, kWindowH);
+        cover.backgroundColor = [UIColor whiteColor];
+        [view addSubview:cover];
+    }
     return view;
 }
 #pragma mark - iCarouselDelegate
-- (void)carouselDidScroll:(iCarousel *)carousel {
-#warning 开始滑动时触发，在这里设置下一页的内容
-    NSLog(@"滑动");
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.ic reloadData];
+        self.ic.contentView.hidden = NO;
+        [SVProgressHUD dismiss];
+    });
 }
+
 static int dex = 0;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
-#warning 切换界面需要更加平滑，或先加载几组数据存起来
-//    NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
     if (carousel.currentItemIndex > dex) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.homeVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
-                [self.ic reloadData];
-            }];
+        [SVProgressHUD show];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.homeVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
+                    self.ic.contentView.hidden = YES;
+                }];
+            });
         });
         dex = (int)carousel.currentItemIndex;
     }else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.homeVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
-                [self.ic reloadData];
-            }];
+        [SVProgressHUD show];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.homeVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
+                    self.ic.contentView.hidden = YES;
+                }];
+            });
         });
+        
         dex = (int)carousel.currentItemIndex;
     }
 }

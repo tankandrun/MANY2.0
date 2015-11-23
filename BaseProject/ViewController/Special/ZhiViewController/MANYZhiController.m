@@ -112,14 +112,14 @@ kRemoveCellSeparator
             [self.tableView.header endRefreshing];
         }];
     }];
-#warning 缺少加载更多功能
-//    self.tableView.footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
-//        [self.zhiVM getMoreDataWithRow:0 CompletionHandle:^(NSError *error) {
-//            self.section += 1;
-//            [self.tableView reloadData];
-//            [self.tableView.footer endRefreshing];
-//        }];
-//    }];
+#warning 加载更多功能需要改进
+    self.tableView.footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        [self.zhiVM getMoreDataWithRow:0 CompletionHandle:^(NSError *error) {
+            self.section += 1;
+            [self.tableView reloadData];
+            [self.tableView.footer endRefreshing];
+        }];
+    }];
     
 }
 - (void)viewWillDisappear:(BOOL)animated {

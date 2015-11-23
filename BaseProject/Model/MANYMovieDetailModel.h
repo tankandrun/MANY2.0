@@ -72,9 +72,9 @@
 
 @end
 
-@interface Casts : NSObject
+@interface Caasts : NSObject
 
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *iD;
 
 @property (nonatomic, copy) NSString *alt;
 

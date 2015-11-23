@@ -18,7 +18,7 @@
 @implementation MovieDetailModel
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"casts" : [Casts class], @"directors" : [Directors class]};
+    return @{@"casts" : [Caasts class], @"directors" : [Directors class]};
 }
 
 @end
@@ -34,8 +34,10 @@
 @end
 
 
-@implementation Casts
-
+@implementation Caasts
++ (NSDictionary *)replacedKeyFromPropertyName {
+    return @{@"iD":@"id"};
+}
 @end
 
 

@@ -114,6 +114,8 @@
 - (NSArray *)getTagsArray {
     return self.movieDetail.genres;
 }
-
+- (NSArray *)getCastsArray {
+    return self.movieDetail.casts;
+}
 
 @end

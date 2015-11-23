@@ -67,6 +67,12 @@
     }];
     scrollview.userInteractionEnabled = YES;
     [self configureReadingScrollView];
+    if (index != self.ic.currentItemIndex) {
+        UIView *cover = [[UIView alloc]init];
+        cover.frame = CGRectMake(0, 0, kWindowW, kWindowH);
+        cover.backgroundColor = [UIColor whiteColor];
+        [view addSubview:cover];
+    }
     
     return view;
 }
@@ -75,18 +81,27 @@ static int dex = 0;
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
     NSLog(@"%ld,%d",carousel.currentItemIndex,dex);
     if (carousel.currentItemIndex > dex) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.readingVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
-                [self.ic reloadData];
-            }];
+        [SVProgressHUD show];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.readingVM getMoreDataWithRow:++self.row CompletionHandle:^(NSError *error) {
+                    [self.ic reloadData];
+                    [SVProgressHUD dismiss];
+                }];
+            });
         });
         dex = (int)carousel.currentItemIndex;
     }else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.readingVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
-                [self.ic reloadData];
-            }];
+        [SVProgressHUD show];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.readingVM getMoreDataWithRow:--self.row CompletionHandle:^(NSError *error) {
+                    [self.ic reloadData];
+                    [SVProgressHUD dismiss];
+                }];
+            });
         });
+        
         dex = (int)carousel.currentItemIndex;
     }
 }

@@ -7,14 +7,15 @@
 //
 
 #import "MANYMovieDetail.h"
+#import "MANYCasts.h"
 
 @implementation MANYMovieDetail
-- (NSMutableArray *)tags {
-    if (!_tags) {
-        _tags = [NSMutableArray new];
-    }
-    return _tags;
-}
+//- (NSMutableArray *)tags {
+//    if (!_tags) {
+//        _tags = [NSMutableArray new];
+//    }
+//    return _tags;
+//}
 - (id)init {
     if (self = [super init]) {
         [self setUpView];
@@ -68,7 +69,6 @@
     }];
     
     UIView *tagView = [[UIView alloc]init];
-    tagView.backgroundColor = [UIColor redColor];
     [self addSubview:tagView];
     [tagView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
@@ -78,12 +78,48 @@
     }];
     UILabel *tag = [[UILabel alloc]init];
     tag.text = @"类型:";
+    tag.textColor = [UIColor whiteColor];
     [tagView addSubview:tag];
     [tag mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.bottom.mas_equalTo(0);
-        make.width.mas_equalTo(80);
+        make.width.mas_equalTo(45);
     }];
-#warning 添加按钮
+    self.tagButton1 = [[UIButton alloc]init];
+    [self.tagButton1 setTitle:@"类型" forState:UIControlStateNormal];
+    self.tagButton1.backgroundColor = kRGBColor(0, 197, 92);
+    [self addSubview:self.tagButton1];
+    [self.tagButton1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(tagView).mas_equalTo(0);
+        make.width.mas_equalTo(60);
+        make.left.mas_equalTo(tag.mas_right).mas_equalTo(10);
+    }];
+    [self.tagButton1 bk_addEventHandler:^(id sender) {
+        NSLog(@"%d",1);
+    } forControlEvents:UIControlEventTouchUpInside];
+    self.tagButton2 = [[UIButton alloc]init];
+    [self.tagButton2 setTitle:@"类型" forState:UIControlStateNormal];
+    self.tagButton2.backgroundColor = kRGBColor(0, 197, 92);
+    [self addSubview:self.tagButton2];
+    [self.tagButton2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(tagView).mas_equalTo(0);
+        make.width.mas_equalTo(60);
+        make.left.mas_equalTo(self.tagButton1.mas_right).mas_equalTo(10);
+    }];
+    [self.tagButton2 bk_addEventHandler:^(id sender) {
+        NSLog(@"%d",1);
+    } forControlEvents:UIControlEventTouchUpInside];
+    self.tagButton3 = [[UIButton alloc]init];
+    [self.tagButton3 setTitle:@"类型" forState:UIControlStateNormal];
+    self.tagButton3.backgroundColor = kRGBColor(0, 197, 92);
+    [self addSubview:self.tagButton3];
+    [self.tagButton3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(tagView).mas_equalTo(0);
+        make.width.mas_equalTo(60);
+        make.left.mas_equalTo(self.tagButton2.mas_right).mas_equalTo(10);
+    }];
+    [self.tagButton3 bk_addEventHandler:^(id sender) {
+        NSLog(@"%d",1);
+    } forControlEvents:UIControlEventTouchUpInside];
     
     
     self.directorImage = [[MANYImageView alloc]init];
@@ -124,7 +160,6 @@
     }];
     
     UIView *castsView = [[UIView alloc]init];
-    castsView.backgroundColor = [UIColor redColor];
     [self addSubview:castsView];
     [castsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(line.mas_right).mas_equalTo(10);
@@ -132,6 +167,42 @@
         make.right.mas_equalTo(-10);
         make.height.mas_equalTo(160);
     }];
+    self.castsScroll = [[UIScrollView alloc]init];
+    [castsView addSubview:self.castsScroll];
+    [self.castsScroll mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(castsView).mas_equalTo(0);
+    }];
+    self.castsScroll.contentSize = CGSizeMake((130.0/600*420+10)*4-10, 160);
+    self.castsScroll.bounces = NO;
+    self.cast1 = [[MANYCasts alloc]init];
+    [self.castsScroll addSubview:self.cast1];
+    [self.cast1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(self.castsScroll).mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(130.0/600*420, 160));
+    }];
+    self.cast2 = [[MANYCasts alloc]init];
+    [self.castsScroll addSubview:self.cast2];
+    [self.cast2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.castsScroll).mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(130.0/600*420, 160));
+        make.left.mas_equalTo(self.cast1.mas_right).mas_equalTo(10);
+    }];
+    self.cast3 = [[MANYCasts alloc]init];
+    [self.castsScroll addSubview:self.cast3];
+    [self.cast3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.castsScroll).mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(130.0/600*420, 160));
+        make.left.mas_equalTo(self.cast2.mas_right).mas_equalTo(10);
+    }];
+    self.cast4 = [[MANYCasts alloc]init];
+    [self.castsScroll addSubview:self.cast4];
+    [self.cast4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.castsScroll).mas_equalTo(0);
+        make.size.mas_equalTo(CGSizeMake(130.0/600*420, 160));
+        make.left.mas_equalTo(self.cast3.mas_right).mas_equalTo(10);
+    }];
+    
+    
     UILabel *castsLb = [[UILabel alloc]init];
     castsLb.text = @"演员:";
     castsLb.textColor = [UIColor whiteColor];
@@ -143,6 +214,7 @@
         make.size.mas_equalTo(CGSizeMake(30, 10));
     }];
     
+    
     self.introLb = [[UILabel alloc]init];
     self.introLb.textColor = [UIColor whiteColor];
     self.introLb.font = [UIFont systemFontOfSize:12];
@@ -151,7 +223,7 @@
     [self.introLb mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
-        make.top.mas_equalTo(castsView.mas_bottom).mas_equalTo(30);
+        make.top.mas_equalTo(castsView.mas_bottom).mas_equalTo(10);
     }];
     
 }
