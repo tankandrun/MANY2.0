@@ -57,7 +57,7 @@
     //QQ分享
     [UMSocialQQHandler setQQWithAppId:@"1104853793" appKey:@"vq90I7z9Cq5Cv4CU" url:nil];
     //微信分享
-    [UMSocialWechatHandler setWXAppId:@"wx945b58aef3a271f0" appSecret:@"0ae78dd42761fd9681b04833c79a857b" url:nil];
+    [UMSocialWechatHandler setWXAppId:@"wxcadd09fc7672cfb2" appSecret:@"d4624c36b6795d1d99dcf0547af5443d" url:nil];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url

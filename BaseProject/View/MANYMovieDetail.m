@@ -10,12 +10,7 @@
 #import "MANYCasts.h"
 
 @implementation MANYMovieDetail
-//- (NSMutableArray *)tags {
-//    if (!_tags) {
-//        _tags = [NSMutableArray new];
-//    }
-//    return _tags;
-//}
+
 - (id)init {
     if (self = [super init]) {
         [self setUpView];
@@ -94,6 +89,7 @@
         make.left.mas_equalTo(tag.mas_right).mas_equalTo(10);
     }];
     [self.tagButton1 bk_addEventHandler:^(id sender) {
+#warning 添加更多相同类型的电影搜索
         NSLog(@"%d",1);
     } forControlEvents:UIControlEventTouchUpInside];
     self.tagButton2 = [[UIButton alloc]init];
@@ -106,6 +102,7 @@
         make.left.mas_equalTo(self.tagButton1.mas_right).mas_equalTo(10);
     }];
     [self.tagButton2 bk_addEventHandler:^(id sender) {
+#warning 添加更多相同类型的电影搜索
         NSLog(@"%d",1);
     } forControlEvents:UIControlEventTouchUpInside];
     self.tagButton3 = [[UIButton alloc]init];
@@ -118,6 +115,7 @@
         make.left.mas_equalTo(self.tagButton2.mas_right).mas_equalTo(10);
     }];
     [self.tagButton3 bk_addEventHandler:^(id sender) {
+#warning 添加更多相同类型的电影搜索
         NSLog(@"%d",1);
     } forControlEvents:UIControlEventTouchUpInside];
     
@@ -129,6 +127,15 @@
         make.top.mas_equalTo(tagView.mas_bottom).mas_equalTo(40);
         make.size.mas_equalTo(CGSizeMake(100, 140));
     }];
+    UIButton *director = [[UIButton alloc]init];
+    [self addSubview:director];
+    [director mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.directorImage).mas_equalTo(0);
+    }];
+    [director bk_addEventHandler:^(id sender) {
+#warning 添加更多导演信息
+        NSLog(@"123");
+    } forControlEvents:UIControlEventTouchUpInside];
     UILabel *directorLb = [[UILabel alloc]init];
     directorLb.text = @"导演:";
     directorLb.textColor = [UIColor whiteColor];
@@ -173,7 +180,6 @@
         make.edges.mas_equalTo(castsView).mas_equalTo(0);
     }];
     self.castsScroll.contentSize = CGSizeMake((130.0/600*420+10)*4-10, 160);
-    self.castsScroll.bounces = NO;
     self.cast1 = [[MANYCasts alloc]init];
     [self.castsScroll addSubview:self.cast1];
     [self.cast1 mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -9,6 +9,7 @@
 #import "MANYHomeController.h"
 #import "MANYHomeCell.h"
 #import "MANYHomeViewModel.h"
+#import "UMSocial.h"
 @interface MANYHomeController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)iCarousel *ic;
 @property (nonatomic,strong)UITableView *tableView;
@@ -51,8 +52,13 @@
     
     [MANYTool getInterFaceWithIc:self.ic usingViewModel:self.homeVM atSuperView:self.view withRow:1];
     self.row = 1;
+    
+    
+    UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToQQ];
+    NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
 
 }
+
 #pragma mark - iCarouselDataSource
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
     return 10;

@@ -10,12 +10,22 @@
 #import "MANYLoginViewController.h"
 #import "MANYSettingViewController.h"
 #import "MANYAboutViewController.h"
+#import "MANYDoneController.h"
+#import "UMSocial.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MANYMeController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) UMSocialAccountEntity *snsAccount;
 @end
 
 @implementation MANYMeController
+//- (UMSocialAccountEntity *)snsAccount {
+//    if (!_snsAccount) {
+//        _snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
+//    }
+//    return _snsAccount;
+//}
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc]init];
@@ -36,6 +46,16 @@
     // Do any additional setup after loading the view.
     self.tableView.hidden = NO;
     self.navigationController.navigationBar.nightBarTintColor = kRGBColor(30, 30, 30);
+    
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
+    self.snsAccount = snsAccount;
+    NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -51,8 +71,15 @@
         cell.backgroundColor = [UIColor clearColor];
     }
     if (indexPath.row == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"login"];
-        cell.textLabel.text = @"立即登录";
+        if (self.snsAccount) {
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.snsAccount.iconURL]placeholderImage:[UIImage imageNamed:@"placehold"]];
+            cell.textLabel.text = self.snsAccount.userName;
+            [cell.imageView.layer setMasksToBounds:YES];
+            cell.imageView.layer.cornerRadius=34;
+        }else {
+            cell.imageView.image = [UIImage imageNamed:@"login"];
+            cell.textLabel.text = @"立即登录";
+        }
     }else if (indexPath.row == 1) {
         cell.imageView.image = [UIImage imageNamed:@"setting"];
         cell.textLabel.text = @"设置";
@@ -69,9 +96,15 @@ kRemoveCellSeparator
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        MANYLoginViewController *vc = [[MANYLoginViewController alloc]init];
-        vc.title = @"登录";
-        [self.navigationController pushViewController:vc animated:YES];
+        if (self.snsAccount) {
+            MANYDoneController *vc = [[MANYDoneController alloc]init];
+            vc.title = self.snsAccount.userName;
+            [self.navigationController pushViewController:vc animated:YES];
+        }else {
+            MANYLoginViewController *vc = [[MANYLoginViewController alloc]init];
+            vc.title = @"登录";
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }else if (indexPath.row == 1) {
         MANYSettingViewController *vc = [[MANYSettingViewController alloc]init];
         vc.title = @"设置";

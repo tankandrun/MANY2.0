@@ -82,6 +82,8 @@
 		A94001EC1BF4C0C000AF106D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94001EB1BF4C0C000AF106D /* ImageIO.framework */; };
 		A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */; };
 		A96C2E9D1BFDCE2900C40E77 /* MANYMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96C2E9C1BFDCE2900C40E77 /* MANYMovieViewController.m */; };
+		A977F7451C032F4E008619C8 /* MANYDoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = A977F7431C032F4E008619C8 /* MANYDoneController.m */; };
+		A977F7481C033374008619C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A977F7471C033374008619C8 /* QuartzCore.framework */; };
 		A988A9A71BF070040080019C /* MANYZhiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A61BF070040080019C /* MANYZhiModel.m */; };
 		A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A91BF072660080019C /* MANYZhiNetManager.m */; };
 		A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9EB1BF07EF00080019C /* MANYZhiListModel.m */; };
@@ -264,6 +266,9 @@
 		A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingScrollView.m; sourceTree = "<group>"; };
 		A96C2E9B1BFDCE2900C40E77 /* MANYMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewController.h; sourceTree = "<group>"; };
 		A96C2E9C1BFDCE2900C40E77 /* MANYMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewController.m; sourceTree = "<group>"; };
+		A977F7421C032F4E008619C8 /* MANYDoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYDoneController.h; sourceTree = "<group>"; };
+		A977F7431C032F4E008619C8 /* MANYDoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYDoneController.m; sourceTree = "<group>"; };
+		A977F7471C033374008619C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A988A9A51BF070040080019C /* MANYZhiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiModel.h; sourceTree = "<group>"; };
 		A988A9A61BF070040080019C /* MANYZhiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiModel.m; sourceTree = "<group>"; };
 		A988A9A81BF072660080019C /* MANYZhiNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiNetManager.h; sourceTree = "<group>"; };
@@ -365,6 +370,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A977F7481C033374008619C8 /* QuartzCore.framework in Frameworks */,
 				A94001EC1BF4C0C000AF106D /* ImageIO.framework in Frameworks */,
 				3885C90B1BE8EA70009441EA /* libz.tbd in Frameworks */,
 				A94001D81BF4C00F00AF106D /* TencentOpenAPI.framework in Frameworks */,
@@ -597,6 +603,8 @@
 				A90081141BF382DF008A3B01 /* MANYMeController.m */,
 				A90081201BF38353008A3B01 /* MANYLoginViewController.h */,
 				A90081211BF38353008A3B01 /* MANYLoginViewController.m */,
+				A977F7421C032F4E008619C8 /* MANYDoneController.h */,
+				A977F7431C032F4E008619C8 /* MANYDoneController.m */,
 				A90081231BF38379008A3B01 /* MANYSettingViewController.h */,
 				A90081241BF38379008A3B01 /* MANYSettingViewController.m */,
 				A938519F1BF43E1900E05730 /* MANYFeedBackController.h */,
@@ -1002,6 +1010,7 @@
 		FA3445AEA3874C1D4FE61EAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A977F7471C033374008619C8 /* QuartzCore.framework */,
 				A94001EB1BF4C0C000AF106D /* ImageIO.framework */,
 				3885C90A1BE8EA70009441EA /* libz.tbd */,
 				3885C9081BE8EA6A009441EA /* libstdc++.tbd */,
@@ -1179,6 +1188,7 @@
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */,
 				A996B6E51BEA2927001CB4EF /* UILabel+TextColor.m in Sources */,
+				A977F7451C032F4E008619C8 /* MANYDoneController.m in Sources */,
 				A996B6DF1BEA2927001CB4EF /* UINavigationBar+Animation.m in Sources */,
 				A996B6E91BEA2927001CB4EF /* UITabBar+NightVersion.m in Sources */,
 				A996B6EB1BEA2927001CB4EF /* UITableView+SeparatorColor.m in Sources */,

@@ -31,6 +31,15 @@
             make.height.mas_equalTo(30);
         }];
         
+        UIButton *moreDetail = [[UIButton alloc]init];
+        [self addSubview:moreDetail];
+        [moreDetail mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(0);
+        }];
+        [moreDetail bk_addEventHandler:^(id sender) {
+#warning 添加电影人搜索
+            NSLog(@"123");
+        } forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }

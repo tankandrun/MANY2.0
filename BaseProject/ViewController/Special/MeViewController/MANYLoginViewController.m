@@ -28,7 +28,6 @@
             make.size.mas_equalTo(CGSizeMake(200, 40));
             make.top.mas_equalTo(self.view).mas_equalTo(450);
         }];
-//        [_weiboIn setBackgroundColor:[UIColor redColor]];
         [_weiboIn bk_addEventHandler:^(id sender) {
             NSLog(@"Log In By Weibo");
             UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
@@ -36,9 +35,10 @@
 //获取微博用户名、uid、token等
             if (response.responseCode == UMSResponseCodeSuccess) {
                 UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
-                    
                 NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
-                }});
+                [self.navigationController popViewControllerAnimated:YES];
+                }
+            });
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _weiboIn;
@@ -55,7 +55,6 @@
             make.size.mas_equalTo(CGSizeMake(200, 40));
             make.top.mas_equalTo(self.weiboIn.mas_bottom).mas_equalTo(30);
         }];
-//        [_qqIn setBackgroundColor:[UIColor redColor]];
         [_qqIn bk_addEventHandler:^(id sender) {
             NSLog(@"Log In By QQ");
             UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];

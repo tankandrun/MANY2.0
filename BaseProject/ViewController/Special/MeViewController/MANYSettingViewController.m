@@ -8,6 +8,7 @@
 
 #import "MANYSettingViewController.h"
 #import "MANYFeedBackController.h"
+#import "UMSocial.h"
 
 @interface MANYSettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -45,7 +46,7 @@
     }else if (section == 1) {
         return 3;
     }else {
-        return 1;
+        return 2;
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,7 +79,11 @@
             cell.detailTextLabel.text = @"MANY2.0";
         }
     }else {
-        cell.textLabel.text = @"清除缓存，手机飞起来";
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"清除缓存，手机飞起来";
+        }else {
+            cell.textLabel.text = @"退出当前账号";
+        }
     }
     
     return cell;
@@ -108,6 +113,12 @@ kRemoveCellSeparator
     if (indexPath.section == 2 && indexPath.row == 0) {
         [[SDImageCache sharedImageCache] clearDisk];
         [SVProgressHUD showInfoWithStatus:@"完成"];
+    }
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        [[UMSocialDataService defaultDataService] requestUnOauthWithType:UMShareToSina  completion:^(UMSocialResponseEntity *response){
+            NSLog(@"response is %@",response);
+        }];
+        [SVProgressHUD showInfoWithStatus:@"成功退出"];
     }
 }
 
