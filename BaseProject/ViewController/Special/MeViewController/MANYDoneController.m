@@ -19,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [MANYTool addBackItemToVC:self];
+    self.view.backgroundColor = [UIColor whiteColor];
+    UILabel *label = [[UILabel alloc]init];
+    label.text = @"待续";
+    label.textColor = [UIColor blackColor];
+    [self.view addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(0);
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 

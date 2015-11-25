@@ -14,16 +14,40 @@
 @property (nonatomic,strong) UIView *bottomBar;
 @property (nonatomic,strong) MANYMovieViewModel *movieVM;
 @property (nonatomic,strong) MANYMovieDetail *detailView;
+//毛玻璃
+@property (nonatomic,strong) UIVisualEffectView *blurEffectView;
+//@property (nonatomic,strong) UIScrollView *scroll;
 @end
 
 @implementation MANYMovieDetailController
+#warning 需要再第二层添加竖向scrollView，detailView的约束需要更改
+//- (UIScrollView *)scroll {
+//    if (!_scroll) {
+//        _scroll = [[UIScrollView alloc]init];
+//        _scroll.frame = CGRectMake(0, 0, kWindowW, kWindowH);
+//        [self.view addSubview:_scroll];
+////        [_scroll mas_makeConstraints:^(MASConstraintMaker *make) {
+////            make.left.top.right.bottom.mas_equalTo(0);
+////        }];
+//        _scroll.contentSize = CGSizeMake(kWindowW, kWindowH+50);
+//    }
+//    return _scroll;
+//}
+- (UIVisualEffectView *)blurEffectView {
+    if (!_blurEffectView) {
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _blurEffectView = [[UIVisualEffectView alloc]initWithEffect:blurEffect];
+        _blurEffectView.frame = CGRectMake(0, 0, kWindowW, kWindowH-44);
+    }
+    return _blurEffectView;
+}
 - (MANYMovieDetail *)detailView {
     if (!_detailView) {
         _detailView = [[MANYMovieDetail alloc]init];
         [self.view addSubview:_detailView];
         [_detailView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.right.mas_equalTo(0);
-            make.bottom.mas_equalTo(-44);
+//            make.bottom.mas_equalTo(-44);
         }];
     }
     return _detailView;
@@ -64,8 +88,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view insertSubview:self.blurEffectView atIndex:1];
+//    self.scroll.hidden = NO;
     self.bottomBar.hidden = NO;
     self.detailView.hidden = NO;
+    
+    
     
     [SVProgressHUD show];
     self.detailView.hidden = YES;

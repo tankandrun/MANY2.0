@@ -98,8 +98,7 @@
     vc.mainImage = [self.moviewVM getImageForItem:indexPath.row];
     vc.rating = [NSString stringWithFormat:@"%.01f",[self.moviewVM getRatingForItem:indexPath.row]];
     vc.intro = [self.moviewVM getIntroForItem:indexPath.row];
-
-    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    
     vc.view.nightBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
     vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
