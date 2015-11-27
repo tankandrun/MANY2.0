@@ -29,7 +29,7 @@
 @property (nonatomic,strong) MANYCasts *cast3;
 @property (nonatomic,strong) MANYCasts *cast4;
 
-@property (nonatomic,strong) UILabel *introLb;
+@property (nonatomic,strong) UITextView *introTV;
 #warning 还没添加
 @property (nonatomic,strong) UIButton *showMore;
 

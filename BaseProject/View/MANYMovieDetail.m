@@ -134,7 +134,7 @@
     }];
     [director bk_addEventHandler:^(id sender) {
 #warning 添加更多导演信息
-        NSLog(@"123");
+        NSLog(@"%@",director.titleLabel.text);
     } forControlEvents:UIControlEventTouchUpInside];
     UILabel *directorLb = [[UILabel alloc]init];
     directorLb.text = @"导演:";
@@ -220,17 +220,20 @@
         make.size.mas_equalTo(CGSizeMake(30, 10));
     }];
     
-    
-    self.introLb = [[UILabel alloc]init];
-    self.introLb.textColor = [UIColor whiteColor];
-    self.introLb.font = [UIFont systemFontOfSize:12];
-    self.introLb.numberOfLines = 0;
-    [self addSubview:self.introLb];
-    [self.introLb mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.introTV = [[UITextView alloc]init];
+    self.introTV.textColor = [UIColor whiteColor];
+    self.introTV.backgroundColor = [UIColor clearColor];
+    self.introTV.font = [UIFont systemFontOfSize:12];
+    self.introTV.selectable = NO;
+    self.introTV.showsVerticalScrollIndicator = NO;
+    [self addSubview:self.introTV];
+    [self.introTV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
         make.top.mas_equalTo(castsView.mas_bottom).mas_equalTo(10);
+        make.bottom.mas_equalTo(self.mas_bottom).mas_equalTo(-10);
     }];
     
+
 }
 @end

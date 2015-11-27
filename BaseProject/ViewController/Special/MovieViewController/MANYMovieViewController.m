@@ -36,9 +36,11 @@
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
     // Do any additional setup after loading the view.
+    [SVProgressHUD show];
     [self.moviewVM refreshDataWithRow:0 CompletionHandle:^(NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
+            [SVProgressHUD dismiss];
         });
     }];
     

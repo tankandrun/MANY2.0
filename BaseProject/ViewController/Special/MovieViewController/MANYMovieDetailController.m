@@ -47,7 +47,7 @@
         [self.view addSubview:_detailView];
         [_detailView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.right.mas_equalTo(0);
-//            make.bottom.mas_equalTo(-44);
+            make.bottom.mas_equalTo(-44);
         }];
     }
     return _detailView;
@@ -93,8 +93,6 @@
     self.bottomBar.hidden = NO;
     self.detailView.hidden = NO;
     
-    
-    
     [SVProgressHUD show];
     self.detailView.hidden = YES;
     [self.movieVM getDetailDataWithName:self.name FromNetCompletionHandle:^(NSError *error) {
@@ -114,7 +112,8 @@
     self.detailView.rating.text = self.rating;
     [self.detailView.directorImage.imageView sd_setImageWithURL:[self.movieVM getDirectorImage]];
     self.detailView.directorNameLb.text = [self.movieVM getDirectorName];
-    self.detailView.introLb.text = [NSString stringWithFormat:@"简介:\n%@",self.intro];
+//    self.detailView.introLb.text = [NSString stringWithFormat:@"简介:\n%@",self.intro];
+    self.detailView.introTV.text = [NSString stringWithFormat:@"简介:\n%@",self.intro];
 #warning 按钮添加搜索更多电影功能
     [self setButtons];
     [self setCasts];

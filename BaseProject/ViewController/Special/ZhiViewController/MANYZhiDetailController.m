@@ -8,6 +8,7 @@
 
 #import "MANYZhiDetailController.h"
 #import "MANYZhiSkipController.h"
+#import "MANYShareController.h"
 
 @interface MANYZhiDetailController ()<UIWebViewDelegate>
 @property (nonatomic,strong) UIWebView *webView;
@@ -16,12 +17,14 @@
 
 @end
 
+#define gap         (kWindowW-(64*4))/3
 @implementation MANYZhiDetailController
 - (UIImageView *)cover {
     if (!_cover) {
         _cover = [[UIImageView alloc]init];
         _cover.frame = self.view.bounds;
         _cover.backgroundColor = [UIColor whiteColor];
+        
     }
     return _cover;
 }
@@ -49,40 +52,57 @@
         }];
         
         UIButton *back = [[UIButton alloc]init];
-        [back setImage:[UIImage imageNamed:@"navBackBtn"] forState:UIControlStateNormal];
-        [back setNightImageN:[UIImage imageNamed:@"navBackBtn"]];
+        [back setImage:[UIImage imageNamed:@"News_Navigation_Arrow_Highlight"] forState:UIControlStateNormal];
         [_bottomBar addSubview:back];
         [back mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(44, 44));
-            make.top.mas_equalTo(0);
-            make.left.mas_equalTo(10);
+            make.size.mas_equalTo(CGSizeMake(64, 43));
+            make.centerY.mas_equalTo(0);
+            make.left.mas_equalTo(0);
         }];
         [back bk_addEventHandler:^(id sender) {
             [self.navigationController popViewControllerAnimated:YES];
         } forControlEvents:UIControlEventTouchUpInside];
         
         UIButton *next = [[UIButton alloc]init];
-        [next setImage:[UIImage imageNamed:@"shareBtn"] forState:UIControlStateNormal];
+        [next setImage:[UIImage imageNamed:@"News_Navigation_Next_Highlight"] forState:UIControlStateNormal];
         [_bottomBar addSubview:next];
         [next mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(44, 44));
-            make.top.mas_equalTo(0);
-            make.left.mas_equalTo(back.mas_right).mas_equalTo(10);
+            make.size.mas_equalTo(CGSizeMake(64, 43));
+            make.centerY.mas_equalTo(0);
+            make.left.mas_equalTo(back.mas_right).mas_equalTo(gap);
         }];
         [next bk_addEventHandler:^(id sender) {
             NSLog(@"下一个");
         } forControlEvents:UIControlEventTouchUpInside];
         
+        UIButton *secondOne = [[UIButton alloc]init];
+        [secondOne setImage:[UIImage imageNamed:@"News_Navigation_Vote"] forState:UIControlStateNormal];
+        [secondOne setImage:[UIImage imageNamed:@"News_Navigation_Voted"] forState:UIControlStateSelected];
+        [_bottomBar addSubview:secondOne];
+        [secondOne mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(64, 43));
+            make.centerY.mas_equalTo(0);
+            make.left.mas_equalTo(next.mas_right).mas_equalTo(gap);
+        }];
+        [secondOne bk_addEventHandler:^(id sender) {
+            secondOne.selected = !secondOne.isSelected;
+        } forControlEvents:UIControlEventTouchUpInside];
+        
         UIButton *latestOne = [[UIButton alloc]init];
-        [latestOne setImage:[UIImage imageNamed:@"shareBtn"] forState:UIControlStateNormal];
+        [latestOne setImage:[UIImage imageNamed:@"News_Navigation_Share_Highlight"] forState:UIControlStateNormal];
         [_bottomBar addSubview:latestOne];
         [latestOne mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(44, 44));
-            make.top.mas_equalTo(0);
-            make.left.mas_equalTo(next.mas_right).mas_equalTo(10);
+            make.size.mas_equalTo(CGSizeMake(64, 43));
+            make.centerY.mas_equalTo(0);
+            make.left.mas_equalTo(secondOne.mas_right).mas_equalTo(gap);
         }];
         [latestOne bk_addEventHandler:^(id sender) {
-            NSLog(@"上一个");
+            MANYShareController *shareView = [[MANYShareController alloc]init];
+            shareView.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+            shareView.view.nightBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
+            shareView.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+            shareView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            [self presentViewController:shareView animated:YES completion:nil];
         } forControlEvents:UIControlEventTouchUpInside];
     }
     return _bottomBar;
