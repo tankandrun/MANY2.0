@@ -46,7 +46,6 @@
     // Do any additional setup after loading the view.
     self.tableView.hidden = NO;
     self.navigationController.navigationBar.nightBarTintColor = kRGBColor(30, 30, 30);
-    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -56,6 +55,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -97,9 +97,12 @@ kRemoveCellSeparator
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         if (self.snsAccount) {
+            self.hidesBottomBarWhenPushed = YES;
             MANYDoneController *vc = [[MANYDoneController alloc]init];
-            vc.title = self.snsAccount.userName;
+            [vc.userImage sd_setImageWithURL:[NSURL URLWithString:self.snsAccount.iconURL]];
+            vc.userName.text = self.snsAccount.userName;
             [self.navigationController pushViewController:vc animated:YES];
+            self.hidesBottomBarWhenPushed = NO;
         }else {
             MANYLoginViewController *vc = [[MANYLoginViewController alloc]init];
             vc.title = @"登录";
@@ -115,11 +118,6 @@ kRemoveCellSeparator
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
-
-
-
-
-
 
 
 

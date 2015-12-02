@@ -25,9 +25,7 @@
         NSLog(@"加入收藏");
     }
 }
-- (IBAction)saveImg:(id)sender {
-    NSLog(@"保存图片");
-}
+
 - (IBAction)fontChange:(id)sender {
     NSLog(@"改字体");
 //    [UMSocialSnsService presentSnsIconSheetView:[self viewController]

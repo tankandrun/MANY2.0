@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *zuozheLB;
 @property (weak, nonatomic) IBOutlet UILabel *zuopinLB;
 
+@property (weak, nonatomic) IBOutlet UIButton *showBtn;
 
 @end

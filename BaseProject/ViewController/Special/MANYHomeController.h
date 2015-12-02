@@ -10,4 +10,6 @@
 
 @interface MANYHomeController : UIViewController
 
+@property (nonatomic,strong) UIImage *image;
+
 @end

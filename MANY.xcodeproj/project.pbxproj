@@ -37,6 +37,7 @@
 		A90081221BF38353008A3B01 /* MANYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90081211BF38353008A3B01 /* MANYLoginViewController.m */; };
 		A90081251BF38379008A3B01 /* MANYSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90081241BF38379008A3B01 /* MANYSettingViewController.m */; };
 		A90081281BF3838D008A3B01 /* MANYAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90081271BF3838D008A3B01 /* MANYAboutViewController.m */; };
+		A911926C1C0DCA9E00EA0D0D /* MANYPicDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A911926B1C0DCA9E00EA0D0D /* MANYPicDetailController.m */; };
 		A938519E1BF432A800E05730 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A938519B1BF432A800E05730 /* libMobClickLibrary.a */; };
 		A93851A11BF43E1900E05730 /* MANYFeedBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93851A01BF43E1900E05730 /* MANYFeedBackController.m */; };
 		A93851E21BF4AB1100E05730 /* MANYSurperiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A93851E11BF4AB1100E05730 /* MANYSurperiseView.m */; };
@@ -81,8 +82,9 @@
 		A94001E91BF4C00F00AF106D /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = A94001C61BF4C00F00AF106D /* markdown.css */; };
 		A94001EC1BF4C0C000AF106D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94001EB1BF4C0C000AF106D /* ImageIO.framework */; };
 		A94A3BFB1BECC02D001552C1 /* MANYReadingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */; };
+		A96A3D811C0C6184008D85AA /* MANYDoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96A3D7F1C0C6184008D85AA /* MANYDoneController.m */; };
+		A96A3D851C0C713B008D85AA /* MANYChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A96A3D841C0C713B008D85AA /* MANYChooseView.m */; };
 		A96C2E9D1BFDCE2900C40E77 /* MANYMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96C2E9C1BFDCE2900C40E77 /* MANYMovieViewController.m */; };
-		A977F7451C032F4E008619C8 /* MANYDoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = A977F7431C032F4E008619C8 /* MANYDoneController.m */; };
 		A977F7481C033374008619C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A977F7471C033374008619C8 /* QuartzCore.framework */; };
 		A988A9A71BF070040080019C /* MANYZhiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A61BF070040080019C /* MANYZhiModel.m */; };
 		A988A9AA1BF072660080019C /* MANYZhiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A988A9A91BF072660080019C /* MANYZhiNetManager.m */; };
@@ -185,6 +187,8 @@
 		A90081241BF38379008A3B01 /* MANYSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYSettingViewController.m; sourceTree = "<group>"; };
 		A90081261BF3838D008A3B01 /* MANYAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYAboutViewController.h; sourceTree = "<group>"; };
 		A90081271BF3838D008A3B01 /* MANYAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYAboutViewController.m; sourceTree = "<group>"; };
+		A911926A1C0DCA9E00EA0D0D /* MANYPicDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYPicDetailController.h; sourceTree = "<group>"; };
+		A911926B1C0DCA9E00EA0D0D /* MANYPicDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYPicDetailController.m; sourceTree = "<group>"; };
 		A938519B1BF432A800E05730 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		A938519C1BF432A800E05730 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		A938519D1BF432A800E05730 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -264,10 +268,12 @@
 		A94001EB1BF4C0C000AF106D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A94A3BF91BECC02D001552C1 /* MANYReadingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYReadingScrollView.h; sourceTree = "<group>"; };
 		A94A3BFA1BECC02D001552C1 /* MANYReadingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYReadingScrollView.m; sourceTree = "<group>"; };
+		A96A3D7E1C0C6184008D85AA /* MANYDoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYDoneController.h; sourceTree = "<group>"; };
+		A96A3D7F1C0C6184008D85AA /* MANYDoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYDoneController.m; sourceTree = "<group>"; };
+		A96A3D831C0C713B008D85AA /* MANYChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYChooseView.h; sourceTree = "<group>"; };
+		A96A3D841C0C713B008D85AA /* MANYChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYChooseView.m; sourceTree = "<group>"; };
 		A96C2E9B1BFDCE2900C40E77 /* MANYMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYMovieViewController.h; sourceTree = "<group>"; };
 		A96C2E9C1BFDCE2900C40E77 /* MANYMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYMovieViewController.m; sourceTree = "<group>"; };
-		A977F7421C032F4E008619C8 /* MANYDoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYDoneController.h; sourceTree = "<group>"; };
-		A977F7431C032F4E008619C8 /* MANYDoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYDoneController.m; sourceTree = "<group>"; };
 		A977F7471C033374008619C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A988A9A51BF070040080019C /* MANYZhiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANYZhiModel.h; sourceTree = "<group>"; };
 		A988A9A61BF070040080019C /* MANYZhiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANYZhiModel.m; sourceTree = "<group>"; };
@@ -566,6 +572,8 @@
 				A9D74E3C1BFEF8E800401742 /* MANYMovieDetail.m */,
 				A9F935E61C02A8C40098457F /* MANYCasts.h */,
 				A9F935E71C02A8C40098457F /* MANYCasts.m */,
+				A96A3D831C0C713B008D85AA /* MANYChooseView.h */,
+				A96A3D841C0C713B008D85AA /* MANYChooseView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -596,15 +604,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A90081121BF382DF008A3B01 /* MeViewController */ = {
+		A90081121BF382DF008A3B01 /* ME */ = {
 			isa = PBXGroup;
 			children = (
 				A90081131BF382DF008A3B01 /* MANYMeController.h */,
 				A90081141BF382DF008A3B01 /* MANYMeController.m */,
 				A90081201BF38353008A3B01 /* MANYLoginViewController.h */,
 				A90081211BF38353008A3B01 /* MANYLoginViewController.m */,
-				A977F7421C032F4E008619C8 /* MANYDoneController.h */,
-				A977F7431C032F4E008619C8 /* MANYDoneController.m */,
+				A96A3D7E1C0C6184008D85AA /* MANYDoneController.h */,
+				A96A3D7F1C0C6184008D85AA /* MANYDoneController.m */,
 				A90081231BF38379008A3B01 /* MANYSettingViewController.h */,
 				A90081241BF38379008A3B01 /* MANYSettingViewController.m */,
 				A938519F1BF43E1900E05730 /* MANYFeedBackController.h */,
@@ -612,10 +620,11 @@
 				A90081261BF3838D008A3B01 /* MANYAboutViewController.h */,
 				A90081271BF3838D008A3B01 /* MANYAboutViewController.m */,
 			);
+			name = ME;
 			path = MeViewController;
 			sourceTree = "<group>";
 		};
-		A90081151BF382DF008A3B01 /* ZhiViewController */ = {
+		A90081151BF382DF008A3B01 /* ZHI */ = {
 			isa = PBXGroup;
 			children = (
 				A90081161BF382DF008A3B01 /* MANYZhiController.h */,
@@ -625,7 +634,28 @@
 				A900811A1BF382DF008A3B01 /* MANYZhiSkipController.h */,
 				A900811B1BF382DF008A3B01 /* MANYZhiSkipController.m */,
 			);
+			name = ZHI;
 			path = ZhiViewController;
+			sourceTree = "<group>";
+		};
+		A91192681C0DCA4100EA0D0D /* PIC */ = {
+			isa = PBXGroup;
+			children = (
+				A93C619B1BEA2DE100167BEB /* MANYHomeController.h */,
+				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
+				A911926A1C0DCA9E00EA0D0D /* MANYPicDetailController.h */,
+				A911926B1C0DCA9E00EA0D0D /* MANYPicDetailController.m */,
+			);
+			name = PIC;
+			sourceTree = "<group>";
+		};
+		A91192691C0DCA5300EA0D0D /* ART */ = {
+			isa = PBXGroup;
+			children = (
+				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
+				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
+			);
+			name = ART;
 			sourceTree = "<group>";
 		};
 		A938519A1BF432A800E05730 /* UMAnalytics_Sdk_3.6.4 */ = {
@@ -641,13 +671,11 @@
 		A93C619A1BEA2DE100167BEB /* Special */ = {
 			isa = PBXGroup;
 			children = (
-				A93C619B1BEA2DE100167BEB /* MANYHomeController.h */,
-				A93C619C1BEA2DE100167BEB /* MANYHomeController.m */,
-				A93C61A21BEA371B00167BEB /* MANYReadingController.h */,
-				A93C61A31BEA371B00167BEB /* MANYReadingController.m */,
-				A9E137C31BFC7422001DED22 /* MovieViewController */,
-				A90081151BF382DF008A3B01 /* ZhiViewController */,
-				A90081121BF382DF008A3B01 /* MeViewController */,
+				A91192681C0DCA4100EA0D0D /* PIC */,
+				A91192691C0DCA5300EA0D0D /* ART */,
+				A90081151BF382DF008A3B01 /* ZHI */,
+				A9E137C31BFC7422001DED22 /* MOV */,
+				A90081121BF382DF008A3B01 /* ME */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -976,7 +1004,7 @@
 			path = PSCollectionView;
 			sourceTree = "<group>";
 		};
-		A9E137C31BFC7422001DED22 /* MovieViewController */ = {
+		A9E137C31BFC7422001DED22 /* MOV */ = {
 			isa = PBXGroup;
 			children = (
 				A96C2E9B1BFDCE2900C40E77 /* MANYMovieViewController.h */,
@@ -984,6 +1012,7 @@
 				A9E137C71BFC7442001DED22 /* MANYMovieDetailController.h */,
 				A9E137C81BFC7442001DED22 /* MANYMovieDetailController.m */,
 			);
+			name = MOV;
 			path = MovieViewController;
 			sourceTree = "<group>";
 		};
@@ -1056,6 +1085,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MANY;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Main;
 				TargetAttributes = {
@@ -1188,7 +1218,7 @@
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				A996B70C1BEA295C001CB4EF /* MANYTabBarController.m in Sources */,
 				A996B6E51BEA2927001CB4EF /* UILabel+TextColor.m in Sources */,
-				A977F7451C032F4E008619C8 /* MANYDoneController.m in Sources */,
+				A96A3D811C0C6184008D85AA /* MANYDoneController.m in Sources */,
 				A996B6DF1BEA2927001CB4EF /* UINavigationBar+Animation.m in Sources */,
 				A996B6E91BEA2927001CB4EF /* UITabBar+NightVersion.m in Sources */,
 				A996B6EB1BEA2927001CB4EF /* UITableView+SeparatorColor.m in Sources */,
@@ -1206,6 +1236,7 @@
 				A9E137AA1BFC1120001DED22 /* MANYShareController.m in Sources */,
 				A988A9EF1BF08B4D0080019C /* MANYZhiViewModel.m in Sources */,
 				A9F3A21F1BF1F13800246D62 /* MANYImageView.m in Sources */,
+				A911926C1C0DCA9E00EA0D0D /* MANYPicDetailController.m in Sources */,
 				A900811F1BF382DF008A3B01 /* MANYZhiSkipController.m in Sources */,
 				A996B6E01BEA2927001CB4EF /* UIBarButtonItem+NightVersion.m in Sources */,
 				A988A9EC1BF07EF00080019C /* MANYZhiListModel.m in Sources */,
@@ -1239,6 +1270,7 @@
 				A9E137BB1BFC4E67001DED22 /* MANYMovieViewModel.m in Sources */,
 				A996B6891BEA2858001CB4EF /* MANYNetManager.m in Sources */,
 				A996B6DB1BEA2927001CB4EF /* UIViewController+ChangeColor.m in Sources */,
+				A96A3D851C0C713B008D85AA /* MANYChooseView.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 				A9E137C21BFC712D001DED22 /* PSCollectionViewCell.m in Sources */,
 				A9E137C91BFC7442001DED22 /* MANYMovieDetailController.m in Sources */,
@@ -1359,6 +1391,7 @@
 			baseConfigurationReference = 4329DABFE5AD654FE71597C9 /* Pods-BaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1386,6 +1419,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myMany;
 				PRODUCT_NAME = MANY;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1394,6 +1428,7 @@
 			baseConfigurationReference = DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

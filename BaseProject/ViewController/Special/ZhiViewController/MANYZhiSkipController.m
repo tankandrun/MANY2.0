@@ -36,18 +36,20 @@
     }
     return  self;
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [MANYTool addBackItemToVC:self];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.hidden = NO;
     [self.webView loadRequest:self.request];
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = YES;
     [SVProgressHUD dismiss];
-    self.tabBarController.tabBar.hidden = YES;
 }
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

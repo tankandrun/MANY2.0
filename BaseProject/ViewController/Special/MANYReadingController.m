@@ -111,6 +111,10 @@ static int dex = 0;
     self.readingScroll.TitleLB.text = [self.readingVM getStrContTitle];
     self.readingScroll.zuozheLB.text = [self.readingVM getStrContAuthor];
     self.readingScroll.contentTV.text = [[self.readingVM getStrContent]stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
+    
+//    NSArray *text = [NSArray new];
+//    text = [[self.readingVM getStrContent] componentsSeparatedByString:@"<br>"];
+    
     self.readingScroll.introduceLB.text = [self.readingVM getStrContAuthorIntroduce];
     [self.readingScroll.pnButton setTitle:[self.readingVM getStrPraiseNumber] forState:UIControlStateNormal];
     self.readingScroll.dazuozheLB.text = [self.readingVM getStrContAuthor];

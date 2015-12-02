@@ -166,11 +166,16 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89V-PD-6VY">
+                        <rect key="frame" x="10" y="40" width="355" height="260"/>
+                        <animations/>
+                    </button>
                 </subviews>
                 <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Bvw-KB-qlr" secondAttribute="trailing" constant="10" id="0X2-zB-ySn"/>
                     <constraint firstItem="5pQ-GY-no5" firstAttribute="trailing" secondItem="Bvw-KB-qlr" secondAttribute="trailing" id="0wi-Uk-5pK"/>
+                    <constraint firstItem="89V-PD-6VY" firstAttribute="centerX" secondItem="Bvw-KB-qlr" secondAttribute="centerX" id="4uf-yX-nFG"/>
                     <constraint firstItem="Bvw-KB-qlr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="9Wx-KU-8sS"/>
                     <constraint firstAttribute="bottom" secondItem="A4x-oE-4VK" secondAttribute="bottom" id="BjU-Kf-ojq"/>
                     <constraint firstAttribute="trailing" secondItem="A4x-oE-4VK" secondAttribute="trailing" id="E0d-y2-sWu"/>
@@ -178,11 +183,14 @@
                     <constraint firstItem="A4x-oE-4VK" firstAttribute="top" secondItem="qU8-EL-fBl" secondAttribute="bottom" constant="10" id="Ezi-M7-DZw"/>
                     <constraint firstItem="qU8-EL-fBl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OKD-8e-b3m"/>
                     <constraint firstItem="qU8-EL-fBl" firstAttribute="top" secondItem="5pQ-GY-no5" secondAttribute="bottom" id="OPF-6f-Qgg"/>
+                    <constraint firstItem="89V-PD-6VY" firstAttribute="height" secondItem="Bvw-KB-qlr" secondAttribute="height" id="UFy-3v-Fcz"/>
                     <constraint firstItem="qU8-EL-fBl" firstAttribute="trailing" secondItem="Bvw-KB-qlr" secondAttribute="trailing" id="Yc8-we-deG"/>
+                    <constraint firstItem="89V-PD-6VY" firstAttribute="centerY" secondItem="Bvw-KB-qlr" secondAttribute="centerY" id="aFM-SX-7qF"/>
                     <constraint firstItem="EKZ-UC-91i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="afH-bv-EES"/>
                     <constraint firstItem="5pQ-GY-no5" firstAttribute="top" secondItem="Bvw-KB-qlr" secondAttribute="bottom" constant="5" id="qD7-n1-pts"/>
                     <constraint firstItem="Bvw-KB-qlr" firstAttribute="top" secondItem="EKZ-UC-91i" secondAttribute="bottom" constant="15" id="s3U-1L-oRt"/>
                     <constraint firstItem="5pQ-GY-no5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="svI-ai-75o"/>
+                    <constraint firstItem="89V-PD-6VY" firstAttribute="width" secondItem="Bvw-KB-qlr" secondAttribute="width" id="uon-th-GJs"/>
                     <constraint firstItem="A4x-oE-4VK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wCX-DO-18R"/>
                 </constraints>
             </tableViewCellContentView>
@@ -194,6 +202,7 @@
                 <outlet property="hpTitleLB" destination="EKZ-UC-91i" id="6ze-J4-KpX"/>
                 <outlet property="monthyearLB" destination="dz4-dk-qyA" id="qeS-Sh-LUW"/>
                 <outlet property="pnBtn" destination="6Ml-Qj-KQt" id="iWt-dY-uka"/>
+                <outlet property="showBtn" destination="89V-PD-6VY" id="WC4-1s-B4r"/>
                 <outlet property="zuopinLB" destination="qU8-EL-fBl" id="LEI-nm-e3M"/>
                 <outlet property="zuozheLB" destination="5pQ-GY-no5" id="pEC-Hu-WZZ"/>
             </connections>

@@ -10,6 +10,7 @@
 #import "MANYHomeCell.h"
 #import "MANYHomeViewModel.h"
 #import "UMSocial.h"
+#import "MANYPicDetailController.h"
 @interface MANYHomeController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)iCarousel *ic;
 @property (nonatomic,strong)UITableView *tableView;
@@ -140,14 +141,26 @@ static int dex = 0;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     self.cell = cell;
     [self configureCell];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     return cell;
 }
 - (void)configureCell {
     self.cell.hpTitleLB.text = [self.homeVM getStrHpTitle];
     [self.cell.homeImage sd_setImageWithURL:[self.homeVM getThumbnailUrl]];
+    [self.cell.showBtn bk_addEventHandler:^(id sender) {
+        MANYPicDetailController *showPic = [[MANYPicDetailController alloc]init];
+        showPic.mainImageView.image = self.cell.homeImage.image;
+        self.image = self.cell.homeImage.image;
+        showPic.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        showPic.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        showPic.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        [self presentViewController:showPic animated:YES completion:nil];
+    } forControlEvents:UIControlEventTouchUpInside];
+
     self.cell.contentLB.text = [self.homeVM getStrContent];
     [self.cell.pnBtn setTitle:[self.homeVM getStrPn].stringValue forState:UIControlStateNormal];
-    self.cell.zuozheLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][0];
+        self.cell.zuozheLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][0];
     self.cell.zuopinLB.text = [[self.homeVM getStrAuther]componentsSeparatedByString:@"&"][1];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];

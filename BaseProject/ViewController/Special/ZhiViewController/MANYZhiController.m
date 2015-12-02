@@ -93,7 +93,6 @@ kRemoveCellSeparator
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UITableView *tableView = [[UITableView alloc]init];
-    self.navigationController.navigationBar.hidden = YES;
     self.tableView = tableView;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -125,6 +124,14 @@ kRemoveCellSeparator
 - (void)viewWillDisappear:(BOOL)animated {
     [SVProgressHUD dismiss];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+
+
 - (void)startShowView {
     UIImageView *cover = [[UIImageView alloc]init];
     cover.backgroundColor = [UIColor whiteColor];
@@ -177,9 +184,11 @@ kRemoveCellSeparator
     return value;
 }
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
+    self.hidesBottomBarWhenPushed = YES;
     MANYZhiDetailController *vc = [[MANYZhiDetailController alloc]init];
     vc.showId = [self.zhiVM getTopIdForRow:index];
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark - UITableViewDataSource
@@ -207,9 +216,11 @@ kRemoveCellSeparator
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.hidesBottomBarWhenPushed = YES;
     MANYZhiDetailController *vc = [[MANYZhiDetailController alloc]init];
     vc.showId = [self.zhiVM getIdForRow:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 

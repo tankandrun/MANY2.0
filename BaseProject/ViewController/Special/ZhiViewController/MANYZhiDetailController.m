@@ -109,23 +109,26 @@
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
     [SVProgressHUD dismiss];
+//    self.tabBarController.tabBar.hidden = NO;
 }
+
 //http://daily.zhihu.com/story/7413288 文章的具体详情，html页面
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
+    
     // Do any additional setup after loading the view.
     NSString *webURL = [NSString stringWithFormat:@"http://daily.zhihu.com/story/%@",self.showId];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:webURL]]];
     
-    self.tabBarController.tabBar.hidden = YES;
     self.bottomBar.hidden = NO;
+//    self.hidesBottomBarWhenPushed = YES;
+//    self.tabBarController.tabBar.hidden = YES;
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    [self.view addSubview:self.cover];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
